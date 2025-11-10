@@ -1,0 +1,58 @@
+# Site settings
+title: ReganCipher
+email: your-email@example.com
+description: >-
+  In-depth audio gear reviews with comprehensive measurements.
+  Headphones, IEMs, and DACs tested with Squiglink precision.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://regancipher.github.io" # your site's URL
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /reviews/:year/:month/:title/
+  news:
+    output: true
+    permalink: /news/:year/:month/:title/
+
+# Exclude files from processing
+exclude:
+  - measurements/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "review"
+      author: "ReganCipher"
+
+# Social links
+youtube_channel: "https://youtube.com/@YourChannel"
+github_username: regancipher
+
+# SEO
+twitter:
+  username: YourTwitterHandle
+  card: summary_large_image
+
+# Analytics (add your tracking ID)
+google_analytics: UA-XXXXXXXXX-X

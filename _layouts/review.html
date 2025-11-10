@@ -1,0 +1,154 @@
+---
+layout: default
+---
+
+<article class="review">
+    <header class="review-header">
+        <h1>{{ page.title }}</h1>
+        
+        <div class="review-meta">
+            <span class="brand">{{ page.brand }}</span>
+            <span class="price">{{ page.price }}</span>
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        </div>
+        
+        {% if page.image %}
+        <div class="review-featured-image">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+        </div>
+        {% endif %}
+        
+        <div class="review-quick-verdict">
+            <div class="rating-box">
+                <span class="rating-number">{{ page.rating }}</span>
+                <span class="rating-outof">/10</span>
+            </div>
+            <div class="verdict-text">
+                <strong>Verdict:</strong> {{ page.verdict }}
+            </div>
+        </div>
+    </header>
+
+    {% if page.youtube_id %}
+    <section class="review-video">
+        <h2>Video Review</h2>
+        {% include youtube-embed.html id=page.youtube_id %}
+    </section>
+    {% endif %}
+
+    <div class="review-body">
+        {{ content }}
+    </div>
+
+    {% if page.measurement_url %}
+    <section class="review-measurements">
+        <h2>Interactive Measurements</h2>
+        <p>Explore the full frequency response data in my measurement database:</p>
+        <div class="measurement-embed">
+            <iframe src="{{ page.measurement_url }}" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0"
+                    title="Frequency Response Measurement"></iframe>
+        </div>
+        <a href="{{ page.measurement_url }}" target="_blank" class="btn-secondary">Open in New Tab →</a>
+    </section>
+    {% endif %}
+
+    <section class="review-summary">
+        <div class="pros-cons">
+            {% if page.pros %}
+            <div class="pros">
+                <h3>✓ Pros</h3>
+                <ul>
+                    {% for pro in page.pros %}
+                    <li>{{ pro }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            
+            {% if page.cons %}
+            <div class="cons">
+                <h3>✗ Cons</h3>
+                <ul>
+                    {% for con in page.cons %}
+                    <li>{{ con }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    {% if page.affiliate_links %}
+    <section class="review-buy">
+        <h2>Where to Buy</h2>
+        <div class="buy-buttons">
+            {% for link in page.affiliate_links %}
+            <a href="{{ link.url }}" class="buy-button" target="_blank" rel="nofollow noopener">
+                <span class="retailer">{{ link.retailer }}</span>
+                <span class="price">{{ link.price }}</span>
+                <span class="cta">Buy Now →</span>
+            </a>
+            {% endfor %}
+        </div>
+        <p class="affiliate-disclosure">
+            <small>These are affiliate links. Using them supports the site at no extra cost to you.</small>
+        </p>
+    </section>
+    {% endif %}
+
+    {% if page.comparison_products %}
+    <section class="review-comparisons">
+        <h2>Compare with Similar Products</h2>
+        <div class="comparison-links">
+            {% for product in page.comparison_products %}
+            <a href="{{ product.url | relative_url }}" class="comparison-card">
+                {{ product.name }} →
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    <footer class="review-footer">
+        <div class="review-tags">
+            {% if page.tags %}
+                {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+        <div class="review-share">
+            <p>Found this review helpful? Share it:</p>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}" 
+                   target="_blank" 
+                   rel="noopener"
+                   class="share-btn">Twitter</a>
+                <a href="https://www.reddit.com/submit?url={{ page.url | absolute_url | uri_escape }}&title={{ page.title | uri_escape }}" 
+                   target="_blank" 
+                   rel="noopener"
+                   class="share-btn">Reddit</a>
+            </div>
+        </div>
+    </footer>
+</article>
+
+<aside class="review-sidebar">
+    <div class="recent-reviews">
+        <h3>Recent Reviews</h3>
+        <ul>
+            {% for post in site.posts limit:5 %}
+                {% if post.url != page.url %}
+                <li>
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    <span class="sidebar-rating">{{ post.rating }}/10</span>
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</aside>

@@ -1,0 +1,30 @@
+<header class="site-header">
+    <div class="header-container">
+        <div class="site-branding">
+            <a href="/" class="site-logo">
+                <img src="/assets/images/hovering_logo.png" alt="ReganCipher Logo" class="logo-image">
+                <span class="site-title">{{ site.title }}</span>
+            </a>
+            <p class="site-tagline">Audio Reviews & Measurements</p>
+        </div>
+        
+        <nav class="site-nav">
+            <ul>
+                <li><a href="/news/">News</a></li>
+                <li><a href="/about/">About Me</a></li>
+                <li><a href="/reviews/">Reviews</a></li>
+                <li><a href="/measurements/">FR Measurements</a></li>
+                <li><a href="/league-table/">Audio League Table</a></li>
+                {% if site.youtube_channel %}
+                <li><a href="{{ site.youtube_channel }}" target="_blank" rel="noopener" class="youtube-link">YouTube</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>

@@ -1,0 +1,116 @@
+---
+layout: default
+title: News & Updates
+permalink: /news/
+---
+
+# News & Updates
+
+## What's on the Bench, Industry Thoughts & Quick Takes
+
+<div class="news-grid">
+    {% for post in site.news %}
+    <article class="news-card-full">
+        {% if post.image %}
+        <div class="news-card-image">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+        </div>
+        {% endif %}
+        
+        <div class="news-card-content">
+            <div class="news-meta">
+                <span class="news-category">{{ post.category }}</span>
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%B %d, %Y" }}
+                </time>
+            </div>
+            
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            
+            <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+            
+            <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+<style>
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.news-card-full {
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.news-card-full:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+}
+
+.news-card-image {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.news-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-card-content {
+    padding: 1.5rem;
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.news-category {
+    background: var(--tertiary-bg);
+    color: var(--accent-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.news-card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.news-card-content h2 a {
+    color: var(--text-primary);
+}
+
+.news-card-content h2 a:hover {
+    color: var(--accent-color);
+}
+
+.news-card-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>

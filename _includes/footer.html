@@ -1,0 +1,37 @@
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>{{ site.title }}</h3>
+            <p>{{ site.description }}</p>
+        </div>
+        
+        <div class="footer-links">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/measurements/">Measurements</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-social">
+            <h4>Connect</h4>
+            <ul>
+                {% if site.youtube_channel %}
+                <li><a href="{{ site.youtube_channel }}" target="_blank" rel="noopener">YouTube</a></li>
+                {% endif %}
+                {% if site.github_username %}
+                <li><a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a></li>
+                {% endif %}
+                {% if site.twitter.username %}
+                <li><a href="https://twitter.com/{{ site.twitter.username }}" target="_blank" rel="noopener">Twitter</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        
+        <div class="footer-legal">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All measurements and reviews are original work.</p>
+            <p><small>Affiliate links support this site at no cost to you.</small></p>
+        </div>
+    </div>
+</footer>
