@@ -1,133 +1,115 @@
 ---
 layout: home
-title: Audio Gear Reviews
+title: Audio Tech Reviews
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }} - Audio Reviews & Measurements</title>
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-</head>
-<body>
-    {% include header.html %}
-    
-    <main class="home-content">
-        <!-- Featured Content Showcase -->
-        <section class="featured-showcase">
-            <!-- Latest YouTube Video -->
-            <div class="featured-youtube">
-                <div class="featured-label">
-                    <span class="label-icon">🎥</span>
-                    <span>Latest Review</span>
-                </div>
-                {% if site.posts.first.youtube_id %}
-                <div class="youtube-embed-large">
-                    <iframe 
-                        width="100%" 
-                        height="100%" 
-                        src="https://www.youtube.com/embed/{{ site.posts.first.youtube_id }}" 
-                        title="{{ site.posts.first.title }}" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="featured-info">
-                    <h2><a href="{{ site.posts.first.url | relative_url }}">{{ site.posts.first.title }}</a></h2>
-                    <p class="featured-meta">
-                        <span class="brand">{{ site.posts.first.brand }}</span>
-                        <span>•</span>
-                        <span class="rating">{{ site.posts.first.rating }}/10</span>
-                        <span>•</span>
-                        <time>{{ site.posts.first.date | date: "%B %d, %Y" }}</time>
-                    </p>
-                    <p class="featured-excerpt">{{ site.posts.first.excerpt | strip_html | truncatewords: 30 }}</p>
-                    <a href="{{ site.posts.first.url | relative_url }}" class="btn-primary">Read Full Review →</a>
-                </div>
-                {% else %}
-                <!-- Fallback if no YouTube video -->
-                <div class="featured-placeholder">
-                    <div class="placeholder-content">
-                        <h2>Latest Content Coming Soon</h2>
-                        <p>Check back for the newest reviews and updates</p>
-                    </div>
-                </div>
-                {% endif %}
-            </div>
-
-            <!-- Latest News/Testing Post -->
-            <div class="featured-news">
-                <div class="featured-label">
-                    <span class="label-icon">📰</span>
-                    <span>What's New</span>
-                </div>
-                <!-- This will be populated with your news posts -->
-                <div class="news-card">
-                    <div class="news-image">
-                        <!-- Placeholder for testing equipment photos or opinion piece images -->
-                        <img src="/assets/images/news-placeholder.jpg" alt="What's on the bench">
-                    </div>
-                    <div class="news-content">
-                        <h3>On The Bench This Week</h3>
-                        <p>Currently testing some exciting new gear. Full reviews coming soon...</p>
-                        <a href="/news/" class="read-more">Read More →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="latest-reviews" class="reviews-grid">
-            <h2>Latest Reviews</h2>
-            
-            <div class="reviews-container">
-                {% for post in site.posts limit:6 %}
-                <article class="review-card">
-                    {% if post.image %}
-                    <div class="review-image">
-                        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-                        <span class="rating-badge">{{ post.rating }}/10</span>
-                    </div>
-                    {% endif %}
-                    
-                    <div class="review-content">
-                        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                        
-                        <div class="review-meta">
-                            <span class="brand">{{ post.brand }}</span>
-                            <span class="price">{{ post.price }}</span>
-                            <time datetime="{{ post.date | date_to_xmlschema }}">
-                                {{ post.date | date: "%B %d, %Y" }}
-                            </time>
-                        </div>
-                        
-                        <p class="review-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-                        
-                        <div class="review-verdict">
-                            <strong>Verdict:</strong> {{ post.verdict }}
-                        </div>
-                        
-                        <a href="{{ post.url | relative_url }}" class="read-more">Read Full Review →</a>
-                    </div>
-                </article>
-                {% endfor %}
-            </div>
-        </section>
-
-        <section class="about-section">
-            <h2>About ReganCipher Reviews</h2>
-            <p>
-                Every product is measured using industry-standard equipment and tested extensively. 
-                My reviews combine objective measurements with subjective listening impressions to give you 
-                the complete picture. All measurements are available in my interactive 
-                <a href="/measurements/">measurement database</a>.
+<!-- Featured Content Showcase -->
+<section class="featured-showcase">
+    <!-- Latest YouTube Video -->
+    <div class="featured-youtube">
+        <div class="featured-label">
+            <span class="label-icon">🎥</span>
+            <span>Latest Review</span>
+        </div>
+        {% if site.posts.first.youtube_id %}
+        <div class="youtube-embed-large">
+            <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/{{ site.posts.first.youtube_id }}" 
+                title="{{ site.posts.first.title }}" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="featured-info">
+            <h2><a href="{{ site.posts.first.url | relative_url }}">{{ site.posts.first.title }}</a></h2>
+            <p class="featured-meta">
+                <span class="brand">{{ site.posts.first.brand }}</span>
+                <span>•</span>
+                <span class="rating">{{ site.posts.first.rating }}/10</span>
+                <span>•</span>
+                <time>{{ site.posts.first.date | date: "%B %d, %Y" }}</time>
             </p>
-            <a href="/about/" class="btn-secondary">Learn More About My Process</a>
-        </section>
-    </main>
+            <p class="featured-excerpt">{{ site.posts.first.excerpt | strip_html | truncatewords: 30 }}</p>
+            <a href="{{ site.posts.first.url | relative_url }}" class="btn-primary">Read Full Review →</a>
+        </div>
+        {% else %}
+        <!-- Fallback if no YouTube video -->
+        <div class="featured-placeholder">
+            <div class="placeholder-content">
+                <h2>Latest Content Coming Soon</h2>
+                <p>Check back for the newest reviews and updates</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
 
-    {% include footer.html %}
-</body>
-</html>
+    <!-- Latest News/Testing Post -->
+    <div class="featured-news">
+        <div class="featured-label">
+            <span class="label-icon">📰</span>
+            <span>What's New</span>
+        </div>
+        <!-- This will be populated with your news posts -->
+        <div class="news-card">
+            <div class="news-image">
+                📦
+            </div>
+            <div class="news-content">
+                <h3>On The Bench This Week</h3>
+                <p>Currently testing some exciting new gear. Full reviews coming soon...</p>
+                <a href="/news/" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="latest-reviews" class="reviews-grid">
+    <h2>Latest Reviews</h2>
+    
+    <div class="reviews-container">
+        {% for post in site.posts limit:6 %}
+        <article class="review-card">
+            {% if post.image %}
+            <div class="review-image">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+                <span class="rating-badge">{{ post.rating }}/10</span>
+            </div>
+            {% endif %}
+            
+            <div class="review-content">
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                
+                <div class="review-meta">
+                    <span class="brand">{{ post.brand }}</span>
+                    <span class="price">{{ post.price }}</span>
+                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date: "%B %d, %Y" }}
+                    </time>
+                </div>
+                
+                <p class="review-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                
+                <div class="review-verdict">
+                    <strong>Verdict:</strong> {{ post.verdict }}
+                </div>
+                
+                <a href="{{ post.url | relative_url }}" class="read-more">Read Full Review →</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="about-section">
+    <h2>About ReganCipher Reviews</h2>
+    <p>
+        Every product is measured using industry-standard equipment and tested extensively. 
+        My reviews combine objective measurements with subjective listening impressions to give you 
+        the complete picture. All measurements are available in my interactive 
+        <a href="/measurements/">measurement database</a>.
+    </p>
+    <a href="/about/" class="btn-secondary">Learn More About My Process</a>
+</section>
