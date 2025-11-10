@@ -3,7 +3,7 @@ title: ReganCipher
 email: your-email@example.com
 description: >-
   In-depth audio gear reviews with comprehensive measurements.
-  Headphones, IEMs, and DACs tested with Squiglink precision.
+  Headphones, IEMs, and DACs tested with ReganCipher precision.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://regancipher.github.io" # your site's URL
 
@@ -46,7 +46,7 @@ defaults:
       author: "ReganCipher"
 
 # Social links
-youtube_channel: "https://youtube.com/@YourChannel"
+youtube_channel: "https://youtube.com/@regancipher
 github_username: regancipher
 
 # SEO
