@@ -1,17 +1,17 @@
 ---
 layout: review
-title: "SoundPEATS H3 Review - Ambitious Triple-Driver TWS"
+title: "SoundPEATS H3"
 date: 2025-10-09
 brand: "SoundPEATS"
 model: "H3"
 price: "MSRP £139.99"
 rating: 4.0
-verdict: "An ambitious approach to the sound delivers the goods, but at the cost of a little practicality"
+verdict: "Sounds great after EQ, but at the cost of a little practicality"
 
 image: /assets/images/reviews/soundpeats-h3/hero.jpg
 measurement_url: "https://regancipher.squig.link/?share=SoundPEATS_H3"
 youtube_id: "0Mr1UBuMqeE"
-affiliate_link: "https://amzn.to/48guCXW (🇺🇸)"
+affiliate_link: "https://amzn.to/48guCXW"
 
 category: iems
 tags:
@@ -31,19 +31,22 @@ specs:
     Battery Life: "~4h with ANC (7h without)"
     Total Battery: "Up to 37 hours"
     Quick Charge: "10min = 2 hours"
+    Wireless Charging: "No"
+    Wear Detection: "No"
+    Spatial Audio: "No"
 
 pros:
-  - Ambitious but coherent driver combo
-  - BA timbre is evident after EQ but not overpowering
+  - Ambitious but pretty coherent driver combo
+  - BA timbre is just about evident after EQ but not overpowering
   - Strong macrodynamic performance for the price/type
-  - Almost holographic presentation
+  - Almost holographic presentation by TWS standards
   - Supports third party tips with standardised nozzle size
   - Various high res codec options
 
 cons:
   - Out of the box tuning is a bit honky and uninspiring
-  - Microdetail could be better
-  - Case feels a bit cheap
+  - Microdetail and resolution could be stronger
+  - Bulky case feels a bit cheap
   - Limited features compared to competition
   - Not as bulky as the Opera05 but still a bit unorthodox
   - Power hungry
@@ -72,7 +75,7 @@ At its price point, the H3 would have to go some way to justify the extra expens
     <img src="/assets/images/reviews/soundpeats-h3/4.jpg" alt="Design" style="max-width: 100%; border-radius: 12px;">
 </div>
 
-The H3 is thankfully more H1 than Opera in its fit and appearance, giving a nod and a wink to a custom IEM, reminding us that this release is all about the sound.
+The H3 is thankfully more 'H1' than 'Opera' in its fit and appearance, giving a nod and a wink to a custom IEM, reminding us that this release is all about the sound.
 
 The H3 features a plastic, semi-transparent shell with a fetching gold faceplate displaying the SoundPEATS logo across the edge. The internals are visible in the side that faces your skin, and whilst it isn't quite premium in its approach, it's functional and attractive.
 
@@ -80,7 +83,7 @@ The H3 features a plastic, semi-transparent shell with a fetching gold faceplate
     <img src="/assets/images/reviews/soundpeats-h3/7.jpg" alt="Fit with Dunu tips" style="max-width: 100%; border-radius: 12px;">
 </div>
 
-This design results in a deeper insertion profile than typical stem-based TWS, which brings both advantages and compromises: with the right eartips (such as the Dunu S&S tips pictured above, which do also fit in the case) you can experience excellent passive isolation, although the slightly-larger-than-average nozzle means it can feel a little uncomfortable for smaller ears, at least with the shallower stock tips, especially if your ear canals are on the narrower side.
+This design results in a deeper insertion profile than typical stem-based TWS, which brings both advantages and compromises: with the right eartips (such as the Dunu S&S tips pictured above, which do also fit in the case) you can experience excellent passive isolation, although the slightly-larger-than-average nozzle means it can feel a little uncomfortable for smaller ears, at least with the shallower stock tips, especially if your ear canals are on the narrower side. It's not as comfortable as, for example, Geekly's Vitas, which uses a similar design brief.
 
 <div style="text-align: center; margin: 2rem 0;">
     <img src="/assets/images/reviews/soundpeats-h3/1.jpg" alt="In-ear view" style="max-width: 100%; border-radius: 12px;">
@@ -102,7 +105,7 @@ The case is big, bold and a bit of a mixed bag. It's roomy enough to fit pretty 
     <img src="/assets/images/reviews/soundpeats-h3/2.jpg" alt="Case detail" style="max-width: 100%; border-radius: 12px;">
 </div>
 
-Here you can see an example of evident 'machine tolerance' in some of the joins and edges. It's hardly a deal-breaker, but is one of the compromises you get compared to the Sony's and Samsung's of this world, who do the whole design and build in-house.
+Here you can see an example of evident 'machine tolerance' in some of the joins and edges. It's hardly a deal-breaker, but is one of the compromises you get compared to the Sony's and Samsung's of this world, who do the whole design and build in-house. It doesn't feel the most robust case in the world either, and has already scratched up pretty quickly.
 
 <div style="text-align: center; margin: 2rem 0;">
     <img src="/assets/images/reviews/soundpeats-h3/5.jpg" alt="Case open" style="max-width: 100%; border-radius: 12px;">
@@ -116,7 +119,7 @@ Overall, it's a functional rather than impressive case, lacking elegance and sup
     <img src="/assets/images/reviews/soundpeats-h3/graph_1.png" alt="Frequency response" style="max-width: 100%; border-radius: 12px;">
 </div>
 
-Whilst it's pretty clear what SoundPEATS are going for in terms of the H series target curve, an iterative approach to refining the sound is evident when you look at the transition from H1 to H3. The big low-end and mid-bass emphasis of the previous two versions has been reigned in somewhat, whilst the less-offensive treble has been retained, with some minor adjustment. The H3 has tried to trim a little brightness from the upper midrange too to give it a more 'hifi-style' profile, and it definitely achieves that, but I'd argue the changes from the H2 actually harm the sound more than improving it, with vocals often sounding a bit honky and nasal. Tonally, it sounds better, but in terms of actual enjoyment, I feel like it needs quite a bit of adjustment to show off the H3's full capabilities.
+Whilst it's pretty clear what SoundPEATS are going for in terms of the H series target curve, an iterative approach to refining the sound is evident when you look at the transition from H1 to H3. The H3, like the Air5 Pro and Pro Plus, adopts SoundPEATS new take on their 'Classic' house sound - the big low-end and mid-bass emphasis of the previous two versions has been reigned in somewhat, whilst the less-offensive treble has been retained, with some minor adjustment. SoundPEATS has tried to trim a little brightness from the upper midrange too to give it a more 'hifi-style' profile, and it definitely achieves that, but I'd argue the changes from the H2 actually harm the sound more than improving it, with vocals often sounding a bit honky and nasal. Tonally, it sounds better, but in terms of actual enjoyment, I feel like it needs quite a bit of adjustment to show off the H3's full capabilities.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0;">
     <img src="/assets/images/reviews/soundpeats-h3/9.jpg" alt="App EQ" style="width: 100%; border-radius: 12px;">
@@ -125,11 +128,11 @@ Whilst it's pretty clear what SoundPEATS are going for in terms of the H series 
 
 I made some slight changes to the sound in the SoundPEATS app, although the adjustments don't do as much to the FR as you might expect. Ignoring the 8kHz resonance peak, even the mild bass adjustments don't seem to do much, but this EQ at least made the H3 a little more palatable. I'll update the review with a better EQ once I've had a proper chance to tune them to my liking, probably with Wavelet as PEATS Audio is a bit limited.
 
-The travails with the default sound aside, there are plenty of positives. The triple driver setup (two Bellsing balanced armatures plus a 12mm custom polymer dynamic driver) delivers much better coherency than their last stab at this, the Opera05. Group delay measurements confirm the perceived strong phase response and driver integration, and the imaging precision is easily SoundPEATS' best achievement yet, with an almost holographic stage presentation and accurate instrument separation and spatial cues, at least by TWS standards. Harmonic distortion is well controlled, particularly in the upper registers where it drops as low as 0.06% at 90dB. This level of performance is usually reserved for sets upwards of £150 and is testament to the ambition and delivery of such a project, which only succeeds when you've made the mistakes previously to learn from.
+The travails with the default sound aside, there are plenty of positives. The triple driver setup (two Bellsing balanced armatures plus a 12mm custom polymer dynamic driver) delivers much better coherency than their last stab at this, the Opera05. Group delay measurements confirm the perceived strong phase response and driver integration, and the imaging precision is easily SoundPEATS' best achievement yet, with an almost holographic stage presentation (by TWS standards) and accurate instrument separation and spatial cues. Harmonic distortion is well controlled, particularly in the upper registers where it drops as low as 0.06% at 90dB. This level of performance is usually reserved for sets upwards of £150 and is testament to the ambition and delivery of such a project, which only succeeds when you've made the mistakes previously to learn from.
 
-Whilst the macrodetail and dynamics, after a little EQ adjustment, deliver emphatically, critical listening will reveal a slight shortcoming in microdetail, with vocals sometimes sounding a little 'smoothed over' when you have more complex layering.
+Whilst the macrodetail and dynamics, after a little EQ adjustment, deliver emphatically, critical listening will reveal a slight shortcoming in microdetail, with vocals sometimes sounding a little 'smoothed over' when you have more complex layering. The staging is impressive and the dynamics are good, but if you switch to something like the Vitas soon after, the gulf in class is very evident.
 
-SoundPEATS are trying to straddle the line between 'fun' and 'audiophile', so this can be forgiven to a degree, but if you're expecting a detail monster, you might be left wanting a little, and whilst the tonality is good by triple driver standards, it lacks the organic charm of something like Moondrop's Golden Ages 2, a set that combines a tuning and Planar driver selection that meshes meticulously. I've seen some comments that the H3 could rival the high-end hybrids like the Rex5, Vitas and ZX1....in reality, it falls short, not just in tonality and micro detail, but in the bass too, which is a bit pillowy compared to the Vitas, for example, which purrs by comparison, flexing layer after layer and exuding textured resonance. The H3 is kinda in the middle - a step up from standard dual-driver TWS offerings that cram in a BA for spec-sheet top trumps, but never really troubling the big hitters.
+SoundPEATS are trying to straddle the line between 'fun' and 'audiophile', so this can be forgiven to a degree, and it's kudos to them  that they've attempted to squeeze this level of audio engineering from a bud that also does ANC and calls pretty well. But if you're expecting a detail monster, you might be left wanting a little, and whilst the tonality is good by triple driver standards, it lacks the organic charm of even something like Moondrop's Golden Ages 2, a set that combines a tuning and Planar driver selection that meshes meticulously. I've seen some comments that the H3 could rival the high-end hybrids like the Rex5, ZX1 and the aforementioned Vitas....in reality, it falls short, not just in tonality and micro detail, but in the bass too, which is a bit pillowy compared to the Vitas, for example, which purrs by comparison, flexing layer after layer and exuding textured resonance. The H3 is kinda in the middle - a step up from standard dual-driver TWS offerings that cram in a BA for spec-sheet top trumps, but never really troubling the big hitters.
 
 <div style="text-align: center; margin: 2rem 0;">
     <img src="/assets/images/reviews/soundpeats-h3/graph.png" alt="ANC off comparison" style="max-width: 100%; border-radius: 12px;">
@@ -141,7 +144,7 @@ It's worth noting, that with ANC off, the bass falls off the chart quite dramati
 
 Despite using Qualcomm's newest chipset, the QCC3091, the only 'bit' that SoundPEATS really take advantage of is the improved throughput. The H3 comes with a wide selection of codecs, including AptX-Lossless, LDAC and AptX-adaptive, and for those with young and uncoloured hearing, you might even notice the barely incremental differences between them, but when it comes to features and functions, the H3 is probably deliberately a bit threadbare.
 
-Notable omissions include wear detection sensors, wind noise reduction modes, and a device list within the app for managing multipoint connections. For a product positioning itself as a premium budget option from a brand typically offering all-rounders, these omissions do feel like missed opportunities. The hearing test feature lacks the shine of the Mimi equivalent that we've seen included with many brand's apps, from Nothing to Creative. It's clunky and produced inconsistent results, at least for me, and whilst many might see Spatial Audio as a bit of a gimmick, more and more releases now have it with decent implementations even in budget offerings from the likes of Realme, QCY and Moondrop.
+Notable omissions include wear detection sensors, wind noise reduction modes, and a device list within the app for managing multipoint connections. For a product positioning itself as a premium budget option from a brand typically offering all-rounders, these omissions do feel like missed opportunities, because good audio a bit cheaper than the big guys probably isn't enough of a differentiator - for SoundPEATS, they really have to do audio really well and a bit of everything else too, not just the basics. The hearing test feature lacks the shine of the Mimi equivalent that we've seen included with many brand's apps, from Nothing to Creative. It's clunky and produced inconsistent results, at least for me, and whilst many might see Spatial Audio as a bit of a gimmick, more and more releases now have it with decent implementations even in budget offerings from the likes of Realme, QCY and Moondrop.
 
 SoundPEATS have always given us a default control scheme that makes sense, including single tap for volume control, but there's also lots of customisation options through their Peats audio app. There's also a low-latency mode, which drops latency from around 216ms to approx. 83ms, although when using LDAC, both gaming mode and multipoint connectivity are disabled, forcing you to choose, to a degree, between optimizing audio and functionality. In all honesty, you'll probably want to stick with AAC anyway because of the hit battery life takes, and because, as I said previously, the differences between codecs are barely noticeable on earbuds - akin to discerning between SD and HD video on a postage stamp.
 
@@ -168,7 +171,5 @@ In busier environments, the noise reduction algorithm steps back a little, prior
 The SoundPEATS H3 doesn't shirk its priorities - it delivers genuinely well-rounded technical audio performance that rivals products at significantly higher price points, particularly in its imaging and soundstage capabilities, that surpasssed my expectation in a mid-budget true wireless offering.
 
 But for those seeking a set of all-rounders, this technical strength comes wrapped in compromises. I can accept a bit of EQ intervention since sound is largely subjective, and a good driver selection and combo will encourage EQ tweaking rather than see it as detrimental. I can also accept a slightly bulky design given the need for a battery, SOC, mics, etc. Not every user will, though. SoundPEATS probably could have benefited from a more Harman-esque default sound profile, whilst still facilitating those features that a lot of buyers will prioritise. The short battery-life, in particular, will put people off, given so many people these days can't seem to tolerate ten minutes of real life! As a result of these shortfalls, the H3 becomes more of a niche set that will be attractive to some, but aren't a guaranteed shoe-in purchase.
-
 ---
-
 **Disclosure:** I received these buds from SoundPEATS for free, but do not receive payment for any review, and the brands sending me earbuds have no creative input into the content (otherwise I won't work with them). My full disclaimer is in the [About](/about/) section.
