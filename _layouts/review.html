@@ -2,64 +2,368 @@
 layout: default
 ---
 
-<article class="review">
+<style>
+/* Review page container */
+.review-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    color: var(--secondary-bg);
+}
+
+/* Review header */
+.review-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.review-header h1 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--secondary-bg);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.review-meta-top {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.review-meta-top .brand {
+    color: var(--primary-bg);
+    font-weight: 700;
+}
+
+.review-meta-top .rating {
+    color: var(--primary-bg);
+    font-weight: 700;
+}
+
+.review-meta-top .price {
+    font-weight: 600;
+}
+
+/* Affiliate link */
+.affiliate-link {
+    display: inline-block;
+    background: var(--primary-bg);
+    color: var(--accent-color);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-family: var(--font-display);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.affiliate-link:hover {
+    background: var(--secondary-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* YouTube embed */
+.review-video {
+    margin: 2rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.review-video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+}
+
+/* Specs and Pros/Cons grid */
+.review-top-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* Specs table */
+.specs-section {
+    background: var(--secondary-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.specs-section h3 {
+    font-family: var(--font-display);
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.specs-section table {
+    width: 100%;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.specs-section td {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.specs-section td:first-child {
+    font-weight: 600;
+    color: var(--text-secondary);
+    width: 40%;
+}
+
+.specs-section tr:last-child td {
+    border-bottom: none;
+}
+
+/* Pros and Cons */
+.pros-cons-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pros-box, .cons-box {
+    background: var(--secondary-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.pros-box h3 {
+    font-family: var(--font-display);
+    color: #3fb950;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.cons-box h3 {
+    font-family: var(--font-display);
+    color: #f85149;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.pros-box ul, .cons-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pros-box li, .cons-box li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.pros-box li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #3fb950;
+    font-weight: bold;
+}
+
+.cons-box li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #f85149;
+    font-weight: bold;
+}
+
+/* Review content */
+.review-content {
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.review-content h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-bg);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.review-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--secondary-bg);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.review-content p {
+    margin-bottom: 1.5rem;
+}
+
+.review-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    display: block;
+}
+
+.review-content a {
+    color: var(--primary-bg);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.review-content a:hover {
+    color: var(--secondary-bg);
+}
+
+.review-content table {
+    width: 100%;
+    margin: 2rem 0;
+    background: var(--secondary-bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.review-content table td,
+.review-content table th {
+    padding: 0.75rem;
+    color: var(--text-primary);
+}
+
+.review-content table th {
+    background: var(--tertiary-bg);
+    font-weight: 600;
+    text-align: left;
+}
+
+.review-content table tr:not(:last-child) td {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.review-content ul, .review-content ol {
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+}
+
+.review-content li {
+    margin-bottom: 0.5rem;
+}
+
+.review-content hr {
+    border: none;
+    border-top: 2px solid rgba(26, 31, 40, 0.2);
+    margin: 3rem 0;
+}
+
+/* Disclosure box */
+.disclosure {
+    background: var(--secondary-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+.disclosure p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .review-page {
+        padding: 2rem 1rem;
+    }
+    
+    .review-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .review-top-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .review-content h2 {
+        font-size: 1.5rem;
+    }
+}
+</style>
+
+<article class="review-page">
+    <!-- Header -->
     <header class="review-header">
         <h1>{{ page.title }}</h1>
         
-        <div class="review-meta">
+        <div class="review-meta-top">
             <span class="brand">{{ page.brand }}</span>
+            <span>•</span>
+            {% if page.rating %}
+            <span class="rating">{{ page.rating }}/5 ⭐</span>
+            <span>•</span>
+            {% endif %}
             <span class="price">{{ page.price }}</span>
+            <span>•</span>
             <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
         </div>
         
-        {% if page.image %}
-        <div class="review-featured-image">
-            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-        </div>
+        {% if page.affiliate_link %}
+        <a href="{{ page.affiliate_link }}" target="_blank" rel="noopener" class="affiliate-link">
+            🛒 Buy on Amazon (Affiliate Link)
+        </a>
         {% endif %}
-        
-        <div class="review-quick-verdict">
-            <div class="rating-box">
-                <span class="rating-number">{{ page.rating }}</span>
-                <span class="rating-outof">/10</span>
-            </div>
-            <div class="verdict-text">
-                <strong>Verdict:</strong> {{ page.verdict }}
-            </div>
-        </div>
     </header>
 
+    <!-- YouTube Video -->
     {% if page.youtube_id %}
-    <section class="review-video">
-        <h2>Video Review</h2>
-        {% include youtube-embed.html id=page.youtube_id %}
-    </section>
-    {% endif %}
-
-    <div class="review-body">
-        {{ content }}
+    <div class="review-video">
+        <iframe 
+            src="https://www.youtube.com/embed/{{ page.youtube_id }}" 
+            title="{{ page.title }}" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
     </div>
-
-    {% if page.measurement_url %}
-    <section class="review-measurements">
-        <h2>Interactive Measurements</h2>
-        <p>Explore the full frequency response data in my measurement database:</p>
-        <div class="measurement-embed">
-            <iframe src="{{ page.measurement_url }}" 
-                    width="100%" 
-                    height="600" 
-                    frameborder="0"
-                    title="Frequency Response Measurement"></iframe>
-        </div>
-        <a href="{{ page.measurement_url }}" target="_blank" class="btn-secondary">Open in New Tab →</a>
-    </section>
     {% endif %}
 
-    <section class="review-summary">
-        <div class="pros-cons">
+    <!-- Specs and Pros/Cons -->
+    <div class="review-top-grid">
+        <!-- Specs -->
+        <div class="specs-section">
+            <h3>Specifications</h3>
+            {% if page.specs %}
+            <table>
+                {% for spec in page.specs %}
+                <tr>
+                    <td>{{ spec[0] }}</td>
+                    <td>{{ spec[1] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+        </div>
+
+        <!-- Pros & Cons -->
+        <div class="pros-cons-section">
             {% if page.pros %}
-            <div class="pros">
-                <h3>✓ Pros</h3>
+            <div class="pros-box">
+                <h3>Pros</h3>
                 <ul>
                     {% for pro in page.pros %}
                     <li>{{ pro }}</li>
@@ -67,10 +371,10 @@ layout: default
                 </ul>
             </div>
             {% endif %}
-            
+
             {% if page.cons %}
-            <div class="cons">
-                <h3>✗ Cons</h3>
+            <div class="cons-box">
+                <h3>Cons</h3>
                 <ul>
                     {% for con in page.cons %}
                     <li>{{ con }}</li>
@@ -79,76 +383,23 @@ layout: default
             </div>
             {% endif %}
         </div>
-    </section>
-
-    {% if page.affiliate_links %}
-    <section class="review-buy">
-        <h2>Where to Buy</h2>
-        <div class="buy-buttons">
-            {% for link in page.affiliate_links %}
-            <a href="{{ link.url }}" class="buy-button" target="_blank" rel="nofollow noopener">
-                <span class="retailer">{{ link.retailer }}</span>
-                <span class="price">{{ link.price }}</span>
-                <span class="cta">Buy Now →</span>
-            </a>
-            {% endfor %}
-        </div>
-        <p class="affiliate-disclosure">
-            <small>These are affiliate links. Using them supports the site at no extra cost to you.</small>
-        </p>
-    </section>
-    {% endif %}
-
-    {% if page.comparison_products %}
-    <section class="review-comparisons">
-        <h2>Compare with Similar Products</h2>
-        <div class="comparison-links">
-            {% for product in page.comparison_products %}
-            <a href="{{ product.url | relative_url }}" class="comparison-card">
-                {{ product.name }} →
-            </a>
-            {% endfor %}
-        </div>
-    </section>
-    {% endif %}
-
-    <footer class="review-footer">
-        <div class="review-tags">
-            {% if page.tags %}
-                {% for tag in page.tags %}
-                <span class="tag">{{ tag }}</span>
-                {% endfor %}
-            {% endif %}
-        </div>
-        
-        <div class="review-share">
-            <p>Found this review helpful? Share it:</p>
-            <div class="share-buttons">
-                <a href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}" 
-                   target="_blank" 
-                   rel="noopener"
-                   class="share-btn">Twitter</a>
-                <a href="https://www.reddit.com/submit?url={{ page.url | absolute_url | uri_escape }}&title={{ page.title | uri_escape }}" 
-                   target="_blank" 
-                   rel="noopener"
-                   class="share-btn">Reddit</a>
-            </div>
-        </div>
-    </footer>
-</article>
-
-<aside class="review-sidebar">
-    <div class="recent-reviews">
-        <h3>Recent Reviews</h3>
-        <ul>
-            {% for post in site.posts limit:5 %}
-                {% if post.url != page.url %}
-                <li>
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                    <span class="sidebar-rating">{{ post.rating }}/10</span>
-                </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
     </div>
-</aside>
+
+    <!-- Verdict -->
+    {% if page.verdict %}
+    <div style="background: var(--secondary-bg); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--accent-color); margin: 2rem 0;">
+        <strong style="color: var(--accent-color);">Verdict:</strong>
+        <span style="color: var(--text-primary);">{{ page.verdict }}</span>
+    </div>
+    {% endif %}
+
+    <!-- Review Content -->
+    <div class="review-content">
+        {{ content }}
+    </div>
+
+    <!-- Disclosure -->
+    <div class="disclosure">
+        <p><strong>Disclosure:</strong> {{ page.disclosure | default: "This product was purchased by me. I do not receive payment for reviews, and manufacturers have no creative input into the content. Full transparency policy in the About section." }}</p>
+    </div>
+</article>
