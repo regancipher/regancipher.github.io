@@ -99,17 +99,13 @@ permalink: /about/
 
 <p>Mostly the channel focuses on TWS around the $30-150 mark, but I've also reviewed some ultra low-budget and some high-end stuff too, even straying into open-earbuds and other sports wearables. Check my 'Playlists' on YouTube - they very clearly categorise each video so you can focus on the stuff that interests you. In an era where social media has eroded our attention span to that of your average goldfish, I'm a bit old school - my reviews are long and detailed, but I do include chapters so if you're looking for something specific - how well a set performs on calls for example - don't fear - the chapters will rescue you from the extra three minutes you might have had to spend without them! :D</p>
 
-<h2>My Review Philosophy</h2>
-
-<p><strong>Measurements + Listening = Complete Picture</strong></p>
+<h2>My Review Philosophy - Say No to 'Trust Me Bro'!</h2>
 
 <p>I see too many reviewers just giving subjective views on things like sound and active noise cancellation, which is not only unfair on the viewer, it's just plan lazy. These attributes can be measured, and it's also possible to record the output and provide those recordings to you guys, so why not? My idea with the channel was always that I'd do the hard work but leave the decisions to you, the viewer/listener, because we all have different ideas and thresholds of what sounds good or is important/acceptable.</p>
 
 <p>I made the decision long ago that I wouldn't put any core content - like the measurements and recordings - behind a paywall, enabling everyone to consume and enjoy it without having to stump up for Patreon membership. That said, if you do feel like my work has helped you make the right decision, you can always contribute towards to the channel - 100% of donations go back towards testing MORE earbuds!</p>
 
-<h2>Review Ethics</h2>
-
-<p><strong>Full Transparency:</strong></p>
+<h2>Review Ethics - Full Transparency</h2>
 
 <ul>
 <li>Products are mostly purchased by me, some are provided by manufacturers for review</li>
@@ -133,7 +129,7 @@ permalink: /about/
 
 <h2>Support the Site</h2>
 
-<p>Reviews take time! If you find my content helpful:</p>
+<p>My reviews take a long time to create, and I don't fill them calls to action, requests to 'like and subscribe', references to content behind a paywall, etc! So instead, I'm going to beg for your recognition here! If you find my content helpful:</p>
 
 <ul>
 <li>🛒 Use my affiliate links when purchasing (costs you nothing extra)</li>
