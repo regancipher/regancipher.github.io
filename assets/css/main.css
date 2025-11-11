@@ -56,14 +56,15 @@ body {
   min-height: 100vh;
 }
 
-/* Header - Clean on gold */
+/* Header - Fixed with backdrop to prevent content intrusion */
 .site-header {
-  background: transparent;
+  background: linear-gradient(135deg, #d4af37 0%, #f0c849 100%);
   padding: 1.5rem 0;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   border-bottom: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -140,16 +141,12 @@ body {
   list-style: none;
 }
 
-.site-nav-left a,
-.site-nav-right a {
-  color: var(--secondary-bg);
-  font-weight: 400;
-  font-family: var(--font-main);
-  font-size: 1.1rem;
-  transition: all 0.2s ease;
-  letter-spacing: 0.05em;
-  text-transform: capitalize;
-  opacity: 0.85;
+.site-nav-left a:hover,
+.site-nav-right a:hover {
+  opacity: 1;
+  color: var(--primary-bg);
+  transform: translateY(-2px);
+  text-decoration: none;
 }
 
 .site-nav-left a:hover,
