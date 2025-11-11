@@ -21,9 +21,13 @@ permalink: /about/
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
+.about-hero p {
+    margin-bottom: 1.5rem;
+}
+
 .about-images {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin: 3rem auto;
     max-width: 1000px;
@@ -32,6 +36,7 @@ permalink: /about/
 .about-images img {
     width: 100%;
     border-radius: 12px;
+    border: 3px solid #d4af37;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
@@ -42,7 +47,7 @@ permalink: /about/
 }
 
 .about-content h2 {
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-bottom: 1.5rem;
     color: #d4af37;
 }
@@ -79,9 +84,7 @@ permalink: /about/
     <div>
         <p>Hi, I'm Regan Cipher - welcome to my long awaited blog and review site. Many of you will know me from my YouTube channel or presence on Head-Fi or Reddit, but a little bit of background - before I was analyzing frequency responses, I was creating them.</p>
 
-
         <p>During the late 90's and early 2000's, I DJ'd to dancefloors in the UK, Ibiza, Scandinavia and Central Europe, and as a producer churned out a few minor releases. Whilst we didn't quite hit the heights of the likes of Calvin Harris and the Swedish House Mafia, we did share the decks with them a few times! This grounding gave me an intimate understanding of how music should sound on consumer audio gear.</p>
-
     </div>
 </div>
 
@@ -92,7 +95,7 @@ permalink: /about/
 </div>
 
 <div class="about-images">
-      <img src="/assets/images/production-studio.jpg" alt="Steve Angello correcting my mix! Cardiff 2009">
+    <img src="/assets/images/production-studio.jpg" alt="Steve Angello correcting my mix! Cardiff 2009">
 </div>
 
 <div class="about-content">
@@ -116,7 +119,7 @@ permalink: /about/
 
 <p><strong>No Paid Reviews:</strong> Manufacturers never see reviews before publication, and they don't influence ratings. If brands don't agree with my terms, I won't work with them. Over the last few years I've stopped working with some for even rushing me when I'm busy. I'm here to enjoy doing this and to help people, not profit.</p>
 
-<p>Encouragingly, the overwhelming majority of brands agree to these terms. Obviously, I cannot fund the channel 100% out of my own pocket, so to help pay for new earbuds I sell some of what I receive to fellow audio enthusiasts at a vastly reduced rate. I receive a small kick-back from affiliate links but they're not specific to that product (i.e. if you buy something else, I still get a small percentage). I also accept donations via Ko-Fi if you feel like my reviews have helped you in some way.</p>
+<p>Encouragingly, the overwhelming majority of brands agree to these terms. Obviously, I cannot fund the channel 100% out of my own pocket, so to help pay for new earbuds I sell some of what I receive to fellow audio enthusiasts at a vastly reduced rate after the comparison window is shut (e.g. when Air Pro 5 is released and I finish the comparison, I sell Air Pro 4 and keep Air Pro 5 until Air Pro 6). I receive a small kick-back from affiliate links but they're not specific to that product (i.e. if you buy something else, I still get a small percentage). I also accept donations via Ko-Fi if you feel like my reviews have helped you in some way.</p>
 
 <h2>Connect With Me</h2>
 
