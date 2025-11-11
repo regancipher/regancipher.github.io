@@ -128,23 +128,17 @@ permalink: /about/
 
 <h1>About Me</h1>
 
-<div class="about-hero">
-    <img src="/assets/images/djing-portrait.jpg" alt="Regan DJing">
-    <div class="about-hero-text">
-        <p>Hi, I'm Regan Cipher - welcome to my long awaited blog and review site. Many of you will know me from my YouTube channel or presence on Head-Fi or Reddit, but a little bit of background - before I was analyzing frequency responses, I was creating them.</p>
-        <p>During the late 90's and early 2000's, I DJ'd to dancefloors in the UK, Ibiza, Scandinavia and Central Europe, and as a producer churned out a few minor releases. Whilst we didn't quite hit the heights of the likes of Calvin Harris and the Swedish House Mafia, we did share the decks with them a few times! This grounding gave me an intimate understanding of how music should sound on consumer audio gear.</p>
-    </div>
-</div>
-
-<div class="about-content">
-
-<p>I later assisted my good friend Kokiri as Tour Manager, keeping a toe in the music industry and providing feedback on his productions. You'll have probably noticed in the binaural sound samples I use in my reviews that Shazam won't find them - if that's the case, it's almost certainly something he or I made but didn't get round to releasing. Post-COVID, the tours have dried up and it was during the first lockdown that I started buying audio gear and wrote a few reviews on Head-Fi. Since then, I've gone through over 100 different sets of wireless earbuds, documenting my findings to help you guys see how much value you can get for your hard earned cash.</p>
-
 <div class="about-images">
     <img src="/assets/images/production-studio.jpg" alt="Steve Angello correcting my mix! Cardiff 2009">
 </div>
 
-<p>Mostly the channel focuses on TWS around the $30-150 mark, but I've also reviewed some ultra low-budget and some high-end stuff too, even straying into open-earbuds and other sports wearables. Check my 'Playlists' on YouTube - they very clearly categorise each video so you can focus on the stuff that interests you. In an era where social media has eroded our attention span to that of your average goldfish, I'm a bit old school - my reviews are long and detailed, but I do include chapters so if you're looking for something specific - how well a set performs on calls for example - don't fear - the chapters will rescue you from the extra three minutes you might have had to spend without them! :D</p>
+    <div class="about-content">
+        <p>Hi, I'm Regan Cipher - welcome to my long awaited blog and review site. Many of you will know me from my YouTube channel or presence on Head-Fi or Reddit, but a little bit of background - before I was analyzing frequency responses, I was creating them.</p>
+        <p>During the late 90's and early 2000's, I DJ'd to dancefloors in the UK, Ibiza, Scandinavia and Central Europe, and as a producer churned out a few minor releases. Whilst we didn't quite hit the heights of the likes of Calvin Harris and the Swedish House Mafia, we did share the decks with them a few times! This grounding gave me an intimate understanding of how music should sound on consumer audio gear.</p>
+
+        <p>I later assisted my good friend Kokiri as Tour Manager, keeping a toe in the music industry and providing feedback on his productions. You'll have probably noticed in the binaural sound samples I use in my reviews that Shazam won't find them - if that's the case, it's almost certainly something he or I made but didn't get round to releasing. Post-COVID, the tours have dried up and it was during the first lockdown that I started buying audio gear and wrote a few reviews on Head-Fi. Since then, I've gone through over 100 different sets of wireless earbuds, documenting my findings to help you guys see how much value you can get for your hard earned cash.</p>
+
+        <p>Mostly the channel focuses on TWS around the $30-150 mark, but I've also reviewed some ultra low-budget and some high-end stuff too, even straying into open-earbuds and other sports wearables. Check my 'Playlists' on YouTube - they very clearly categorise each video so you can focus on the stuff that interests you. In an era where social media has eroded our attention span to that of your average goldfish, I'm a bit old school - my reviews are long and detailed, but I do include chapters so if you're looking for something specific - how well a set performs on calls for example - don't fear - the chapters will rescue you from the extra three minutes you might have had to spend without them! :D</p>
 
 <h2>My Review Philosophy - Say No to 'Trust Me Bro'!</h2>
 
