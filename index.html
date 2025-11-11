@@ -1,21 +1,210 @@
 ---
-layout: home
+layout: default
 title: Audio Tech Reviews
 ---
 
-<!-- Featured Content Showcase -->
-<section class="featured-showcase">
-    <!-- Latest YouTube Video -->
-    <div class="featured-youtube">
-        <div class="featured-label">
-            <span class="label-icon">🎥</span>
-            <span>Latest Review</span>
-        </div>
+<style>
+.hero-section {
+    position: relative;
+    min-height: 70vh;
+    background: linear-gradient(135deg, #d4af37 0%, #f0c849 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 4rem 2rem;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background-image: url('/assets/images/hovering_logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.featured-review-card {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    width: 100%;
+    background: #1a1f28;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.review-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    background: #000;
+}
+
+.review-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.review-info {
+    padding: 2.5rem;
+    color: #e6edf3;
+}
+
+.review-label {
+    display: inline-block;
+    background: #d4af37;
+    color: #1a1f28;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.review-info h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.review-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.meta-item .brand {
+    color: #d4af37;
+    font-weight: 700;
+}
+
+.meta-item .rating {
+    color: #d4af37;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.review-excerpt {
+    color: #a8b0bc;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.review-cta {
+    display: inline-block;
+    background: #d4af37;
+    color: #1a1f28;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.review-cta:hover {
+    background: #f0c849;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    color: #1a1f28;
+}
+
+.quick-links {
+    max-width: 1200px;
+    margin: -3rem auto 4rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.quick-link-card {
+    background: #1a1f28;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-decoration: none;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-4px);
+    border-color: #d4af37;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.quick-link-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.quick-link-card h3 {
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.quick-link-card p {
+    color: #a8b0bc;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .review-info h1 {
+        font-size: 1.75rem;
+    }
+
+    .review-info {
+        padding: 1.5rem;
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+    }
+}
+</style>
+
+<section class="hero-section">
+    <div class="featured-review-card">
         {% if site.posts.first.youtube_id %}
-        <div class="youtube-embed-large">
+        <div class="review-video">
             <iframe
-                width="100%"
-                height="100%"
                 src="https://www.youtube.com/embed/{{ site.posts.first.youtube_id }}"
                 title="{{ site.posts.first.title }}"
                 frameborder="0"
@@ -23,82 +212,60 @@ title: Audio Tech Reviews
                 allowfullscreen>
             </iframe>
         </div>
-        <div class="featured-info">
-            <h2><a href="{{ site.posts.first.url | relative_url }}">{{ site.posts.first.title }}</a></h2>
-            <p class="featured-meta">
-                <span class="brand">{{ site.posts.first.brand }}</span>
-                <span>•</span>
-                <span class="rating">{{ site.posts.first.rating }}/10</span>
-                <span>•</span>
-                <time>{{ site.posts.first.date | date: "%B %d, %Y" }}</time>
-            </p>
-            <p class="featured-excerpt">{{ site.posts.first.excerpt | strip_html | truncatewords: 30 }}</p>
-            <a href="{{ site.posts.first.url | relative_url }}" class="btn-primary">Read Full Review →</a>
-        </div>
-        {% else %}
-        <!-- Fallback if no YouTube video -->
-        <div class="featured-placeholder">
-            <div class="placeholder-content">
-                <h2>Latest Content Coming Soon</h2>
-                <p>Check back for the newest reviews and updates</p>
-            </div>
-        </div>
         {% endif %}
-    </div>
 
-    <!-- Latest News/Testing Post -->
-    <div class="featured-news">
-        <div class="featured-label">
-            <span class="label-icon">📰</span>
-            <span>What's New</span>
-        </div>
-        <!-- This will be populated with your news posts -->
-        <div class="news-card">
-            <div class="news-image">
-                📦
+        <div class="review-info">
+            <span class="review-label">Latest Review</span>
+
+            <h1>{{ site.posts.first.title }}</h1>
+
+            <div class="review-meta">
+                <div class="meta-item">
+                    <span class="brand">{{ site.posts.first.brand }}</span>
+                </div>
+                <div class="meta-item">
+                    <span>•</span>
+                </div>
+                <div class="meta-item">
+                    <span class="rating">{{ site.posts.first.rating }}/10</span>
+                </div>
+                <div class="meta-item">
+                    <span>•</span>
+                </div>
+                <div class="meta-item">
+                    <time>{{ site.posts.first.date | date: "%B %d, %Y" }}</time>
+                </div>
             </div>
-            <div class="news-content">
-                <h3>On The Bench This Week</h3>
-                <p>Currently testing some exciting new gear. Full reviews coming soon...</p>
-                <a href="/news/" class="read-more">Read More →</a>
-            </div>
+
+            <p class="review-excerpt">{{ site.posts.first.excerpt | strip_html | truncatewords: 30 }}</p>
+
+            <a href="{{ site.posts.first.url | relative_url }}" class="review-cta">Read Full Review →</a>
         </div>
     </div>
 </section>
 
-<section id="latest-reviews" class="reviews-grid">
-    <h2>Latest Reviews</h2>
+<section class="quick-links">
+    <a href="/news/" class="quick-link-card">
+        <div class="quick-link-icon">📰</div>
+        <h3>What's New</h3>
+        <p>Latest testing updates & insights</p>
+    </a>
 
-    <div class="reviews-container">
-        {% for post in site.posts limit:6 %}
-        <article class="review-card">
-            {% if post.image %}
-            <div class="review-image">
-                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-                <span class="rating-badge">{{ post.rating }}/10</span>
-            </div>
-            {% endif %}
+    <a href="/measurements/" class="quick-link-card">
+        <div class="quick-link-icon">📊</div>
+        <h3>Measurements</h3>
+        <p>Interactive frequency response data</p>
+    </a>
 
-            <div class="review-content">
-                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <a href="/league-table/" class="quick-link-card">
+        <div class="quick-link-icon">🏆</div>
+        <h3>League Table</h3>
+        <p>Rankings across all categories</p>
+    </a>
 
-                <div class="review-meta">
-                    <span class="brand">{{ post.brand }}</span>
-                    <span class="price">{{ post.price }}</span>
-                    <time datetime="{{ post.date | date_to_xmlschema }}">
-                        {{ post.date | date: "%B %d, %Y" }}
-                    </time>
-                </div>
-
-                <p class="review-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-
-                <div class="review-verdict">
-                    <strong>Verdict:</strong> {{ post.verdict }}
-                </div>
-
-                <a href="{{ post.url | relative_url }}" class="read-more">Read Full Review →</a>
-            </div>
-        </article>
-        {% endfor %}
-    </div>
+    <a href="/about/" class="quick-link-card">
+        <div class="quick-link-icon">🎧</div>
+        <h3>About Me</h3>
+        <p>From the decks to the desk</p>
+    </a>
 </section>
