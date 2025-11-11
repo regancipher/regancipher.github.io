@@ -22,7 +22,8 @@ tags:
 
 specs:
     Driver: "1×12mm Dual-Layer DD, 2×BA"
-    Bluetooth: "5.4 (QCC3091)"
+    Bluetooth Version: "5.4"
+    Chipset: Qualcomm QCC3091
     Codecs: "LDAC, LC3, AptX-Lossless, AptX-Adaptive, AAC, SBC"
     ANC: "Yes, up to 55dB"
     App Support: "Yes (PEATS Audio)"
