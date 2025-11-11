@@ -113,14 +113,14 @@ Overall, it's a functional rather than impressive case, lacking elegance and sup
 ## Audio & Sound Signature
 
 <div style="text-align: center; margin: 2rem 0;">
-    <img src="/assets/images/reviews/soundpeats-h3/graph-1.png" alt="Frequency response" style="max-width: 100%; border-radius: 12px;">
+    <img src="/assets/images/reviews/soundpeats-h3/graph_1.png" alt="Frequency response" style="max-width: 100%; border-radius: 12px;">
 </div>
 
 Whilst it's pretty clear what SoundPEATS are going for in terms of the H series target curve, an iterative approach to refining the sound is evident when you look at the transition from H1 to H3. The big low-end and mid-bass emphasis of the previous two versions has been reigned in somewhat, whilst the less-offensive treble has been retained, with some minor adjustment. The H3 has tried to trim a little brightness from the upper midrange too to give it a more 'hifi-style' profile, and it definitely achieves that, but I'd argue the changes from the H2 actually harm the sound more than improving it, with vocals often sounding a bit honky and nasal. Tonally, it sounds better, but in terms of actual enjoyment, I feel like it needs quite a bit of adjustment to show off the H3's full capabilities.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0;">
-    <img src="/assets/images/reviews/soundpeats-h3/app-1.jpg" alt="App EQ" style="width: 100%; border-radius: 12px;">
-    <img src="/assets/images/reviews/soundpeats-h3/app-2.png" alt="Custom EQ" style="width: 100%; border-radius: 12px;">
+    <img src="/assets/images/reviews/soundpeats-h3/9.jpg" alt="App EQ" style="width: 100%; border-radius: 12px;">
+    <img src="/assets/images/reviews/soundpeats-h3/Customise4.png" alt="Custom EQ" style="width: 100%; border-radius: 12px;">
 </div>
 
 I made some slight changes to the sound in the SoundPEATS app, although the adjustments don't do as much to the FR as you might expect. Ignoring the 8kHz resonance peak, even the mild bass adjustments don't seem to do much, but this EQ at least made the H3 a little more palatable. I'll update the review with a better EQ once I've had a proper chance to tune them to my liking, probably with Wavelet as PEATS Audio is a bit limited.
@@ -132,7 +132,7 @@ Whilst the macrodetail and dynamics, after a little EQ adjustment, deliver empha
 SoundPEATS are trying to straddle the line between 'fun' and 'audiophile', so this can be forgiven to a degree, but if you're expecting a detail monster, you might be left wanting a little, and whilst the tonality is good by triple driver standards, it lacks the organic charm of something like Moondrop's Golden Ages 2, a set that combines a tuning and Planar driver selection that meshes meticulously. I've seen some comments that the H3 could rival the high-end hybrids like the Rex5, Vitas and ZX1....in reality, it falls short, not just in tonality and micro detail, but in the bass too, which is a bit pillowy compared to the Vitas, for example, which purrs by comparison, flexing layer after layer and exuding textured resonance. The H3 is kinda in the middle - a step up from standard dual-driver TWS offerings that cram in a BA for spec-sheet top trumps, but never really troubling the big hitters.
 
 <div style="text-align: center; margin: 2rem 0;">
-    <img src="/assets/images/reviews/soundpeats-h3/graph-2.png" alt="ANC off comparison" style="max-width: 100%; border-radius: 12px;">
+    <img src="/assets/images/reviews/soundpeats-h3/graph.png" alt="ANC off comparison" style="max-width: 100%; border-radius: 12px;">
 </div>
 
 It's worth noting, that with ANC off, the bass falls off the chart quite dramatically, so bear this in mind when you're eq'ing.
@@ -170,3 +170,5 @@ The SoundPEATS H3 doesn't shirk its priorities - it delivers genuinely well-roun
 But for those seeking a set of all-rounders, this technical strength comes wrapped in compromises. I can accept a bit of EQ intervention since sound is largely subjective, and a good driver selection and combo will encourage EQ tweaking rather than see it as detrimental. I can also accept a slightly bulky design given the need for a battery, SOC, mics, etc. Not every user will, though. SoundPEATS probably could have benefited from a more Harman-esque default sound profile, whilst still facilitating those features that a lot of buyers will prioritise. The short battery-life, in particular, will put people off, given so many people these days can't seem to tolerate ten minutes of real life! As a result of these shortfalls, the H3 becomes more of a niche set that will be attractive to some, but aren't a guaranteed shoe-in purchase.
 
 ---
+
+**Disclosure:** I received these buds from SoundPEATS for free, but do not receive payment for any review, and the brands sending me earbuds have no creative input into the content (otherwise I won't work with them). My full disclaimer is in the [About](/about/) section.
