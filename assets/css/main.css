@@ -43,54 +43,23 @@
   box-sizing: border-box;
 }
 
-/* Base */
+/* Global body - Gold background for ALL pages */
 body {
   font-family: var(--font-main);
-  background: var(--primary-bg);
+  background: linear-gradient(135deg, #d4af37 0%, #f0c849 100%);
+  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
-/* Headings - Use Display Font */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-/* Links - No Blue! */
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-a:hover {
-  color: var(--accent-hover);
-}
-
-/* Header - Gold background, centered logo */
+/* Header - Clean on gold */
 .site-header {
-  background: linear-gradient(135deg, #d4af37 0%, #f0c849 100%);
-  padding: 1rem 0;
+  background: transparent;
+  padding: 1.5rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -100,78 +69,102 @@ a:hover {
 .header-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  padding: 0 3rem;
+  display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  gap: 3rem;
 }
 
-/* Center logo */
+/* Logo branding with text */
 .site-branding-center {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-.site-logo {
-  display: block;
+.brand-text-left {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--secondary-bg);
+  letter-spacing: 0.1em;
 }
 
 .logo-image {
-  height: 80px;
-  width: 80px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .logo-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(5deg);
 }
 
-/* Left and right nav */
+.brand-text-right {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--secondary-bg);
+  letter-spacing: 0.1em;
+}
+
+/* Navigation - Clean, slim */
+.site-nav-left,
+.site-nav-right {
+  flex: 1;
+}
+
 .site-nav-left ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
   justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
 .site-nav-right ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
   justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav-left li,
+.site-nav-right li {
+  list-style: none;
 }
 
 .site-nav-left a,
 .site-nav-right a {
   color: var(--secondary-bg);
-  font-weight: 700;
-  font-family: var(--font-display);
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  background: rgba(26, 31, 40, 0.15);
+  font-weight: 400;
+  font-family: var(--font-main);
+  font-size: 1.1rem;
   transition: all 0.2s ease;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  opacity: 0.85;
 }
 
 .site-nav-left a:hover,
 .site-nav-right a:hover {
-  background: var(--secondary-bg);
-  color: var(--accent-color);
+  opacity: 1;
+  color: var(--primary-bg);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer - Gold background */
+/* Footer - Clean on gold */
 .site-footer {
-  background: linear-gradient(135deg, #d4af37 0%, #f0c849 100%);
+  background: transparent;
   margin-top: 4rem;
-  padding: 3rem 0 1rem;
-  border-top: none;
+  padding: 3rem 0 1.5rem;
+  border-top: 2px solid rgba(26, 31, 40, 0.15);
 }
 
 .footer-container {
@@ -196,7 +189,7 @@ a:hover {
 .footer-about p {
   color: var(--secondary-bg);
   line-height: 1.7;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .footer-links ul,
@@ -205,13 +198,20 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-social li {
+  list-style: none;
 }
 
 .footer-links a,
 .footer-social a {
   color: var(--secondary-bg);
-  font-weight: 600;
-  opacity: 0.9;
+  font-weight: 500;
+  opacity: 0.85;
   transition: all 0.2s ease;
 }
 
@@ -224,7 +224,7 @@ a:hover {
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(26, 31, 40, 0.2);
+  border-top: 1px solid rgba(26, 31, 40, 0.15);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -237,19 +237,25 @@ a:hover {
 }
 
 /* Mobile responsive */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .header-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
-  .site-nav-left,
-  .site-nav-right {
-    display: none;
-  }
-
-  .site-branding-center {
+  .site-nav-left ul,
+  .site-nav-right ul {
     justify-content: center;
+  }
+
+  .brand-text-left,
+  .brand-text-right {
+    font-size: 1.75rem;
+  }
+
+  .logo-image {
+    height: 80px;
+    width: 80px;
   }
 
   .footer-container {
