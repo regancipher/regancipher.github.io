@@ -138,22 +138,51 @@ body {
 
 .site-nav-left li,
 .site-nav-right li {
-  list-style: none;
+  list-style: none !important;
 }
 
-.site-nav-left a:hover,
-.site-nav-right a:hover {
-  opacity: 1;
-  color: var(--primary-bg);
-  transform: translateY(-2px);
+/* Links - No blue/purple! */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
   text-decoration: none;
 }
 
+a:visited {
+  color: var(--accent-color);
+}
+
+/* Navigation links - Dark, uppercase, no underline */
+.site-nav-left a,
+.site-nav-right a {
+  color: #1a1f28 !important;
+  font-weight: 600 !important;
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  letter-spacing: 0.08em;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  opacity: 0.9;
+}
+
 .site-nav-left a:hover,
 .site-nav-right a:hover {
-  opacity: 1;
-  color: var(--primary-bg);
+  opacity: 1 !important;
+  color: #000000 !important;
   transform: translateY(-2px);
+  text-decoration: none !important;
+}
+
+.site-nav-left a:visited,
+.site-nav-right a:visited {
+  color: #1a1f28 !important;
+  text-decoration: none !important;
 }
 
 /* Footer - Clean on gold */
