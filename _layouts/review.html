@@ -113,6 +113,7 @@ layout: default
 .specs-section td {
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
 }
 
 .specs-section td:first-child {
@@ -199,6 +200,11 @@ layout: default
     letter-spacing: 0.05em;
 }
 
+/* HIDE the Specifications heading in content */
+.review-content h2:first-of-type {
+    display: none;
+}
+
 .review-content h3 {
     font-family: var(--font-display);
     font-size: 1.5rem;
@@ -229,6 +235,11 @@ layout: default
 
 .review-content a:hover {
     color: var(--secondary-bg);
+}
+
+/* HIDE the first table in content (specs table) */
+.review-content table:first-of-type {
+    display: none;
 }
 
 .review-content table {
@@ -280,10 +291,19 @@ layout: default
 }
 
 .disclosure p {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 0;
+}
+
+.disclosure a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.disclosure a:hover {
+    color: var(--accent-hover);
 }
 
 /* Mobile responsive */
@@ -400,6 +420,6 @@ layout: default
 
     <!-- Disclosure -->
     <div class="disclosure">
-        <p><strong>Disclosure:</strong> {{ page.disclosure | default: "This product was purchased by me. I do not receive payment for reviews, and manufacturers have no creative input into the content. Full transparency policy in the About section." }}</p>
+        <p><strong>Disclosure:</strong> I received these buds from the manufacturer for free, but do not receive payment for any review, and the brands sending me earbuds have no creative input into the content (otherwise I won't work with them). My full disclaimer is in the <a href="/about/">About</a> section.</p>
     </div>
 </article>

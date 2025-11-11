@@ -11,6 +11,7 @@ verdict: "An ambitious approach to the sound delivers the goods, but at the cost
 image: /assets/images/reviews/soundpeats-h3/hero.jpg
 measurement_url: "https://regancipher.squig.link/?share=SoundPEATS_H3"
 youtube_id: "0Mr1UBuMqeE"
+affiliate_link: "https://amzn.to/48guCXW (🇺🇸)"
 
 category: iems
 tags:
@@ -18,6 +19,18 @@ tags:
   - triple-driver
   - anc
   - ldac
+
+specs:
+    Driver: "1×12mm Dual-Layer DD, 2×BA"
+    Bluetooth: "5.4 (QCC3091)"
+    Codecs: "LDAC, LC3, AptX-Lossless, AptX-Adaptive, AAC, SBC"
+    ANC: "Yes, up to 55dB"
+    App Support: "Yes (PEATS Audio)"
+    Multipoint: "Yes"
+    Water Resistance: "IPX5"
+    Battery Life: "~4h with ANC (7h without)"
+    Total Battery: "Up to 37 hours"
+    Quick Charge: "10min = 2 hours"
 
 pros:
   - Ambitious but coherent driver combo
@@ -35,27 +48,11 @@ cons:
   - Not as bulky as the Opera05 but still a bit unorthodox
   - Power hungry
 
-excerpt: "The SoundPEATS H3 delivers genuinely well-rounded technical audio performance that rivals products at significantly higher price points, particularly in imaging and soundstage capabilities."
+excerpt: "The H3 is SoundPEATS' most ambitious TWS yet when it comes to sound - and after a bit of EQ'ing, the macrodetail and staging shine through. But beware - it isn't the most practical option if you're looking for a set of all-rounders"
 ---
 
 **Review Reference:** RC183  
 **Price at Review:** £139.99 (currently £97.99 at Amazon UK)
-**Affiliated Link to Purchase:** https://amzn.to/48guCXW (🇺🇸)
-
-## Specifications
-
-| Feature | Details |
-|---------|---------|
-| Driver | 1×12mm Dual-Layer DD, 2×BA |
-| Bluetooth | 5.4 (QCC3091) |
-| Codecs | LDAC, LC3, AptX-Lossless, AptX-Adaptive, AAC, SBC |
-| ANC | Yes, up to 55dB stated |
-| App Support | Yes (PEATS Audio) |
-| Multipoint | Yes |
-| Water Resistance | IPX5 |
-| Battery Life | ~4h with ANC (7h without) |
-| Total Battery | Up to 37 hours |
-| Quick Charge | 10min = 2 hours |
 
 <div style="text-align: center; margin: 2rem 0;">
     <img src="/assets/images/reviews/soundpeats-h3/3.jpg" alt="SoundPEATS H3" style="max-width: 100%; border-radius: 12px;">
@@ -173,5 +170,3 @@ The SoundPEATS H3 doesn't shirk its priorities - it delivers genuinely well-roun
 But for those seeking a set of all-rounders, this technical strength comes wrapped in compromises. I can accept a bit of EQ intervention since sound is largely subjective, and a good driver selection and combo will encourage EQ tweaking rather than see it as detrimental. I can also accept a slightly bulky design given the need for a battery, SOC, mics, etc. Not every user will, though. SoundPEATS probably could have benefited from a more Harman-esque default sound profile, whilst still facilitating those features that a lot of buyers will prioritise. The short battery-life, in particular, will put people off, given so many people these days can't seem to tolerate ten minutes of real life! As a result of these shortfalls, the H3 becomes more of a niche set that will be attractive to some, but aren't a guaranteed shoe-in purchase.
 
 ---
-
-**Disclosure:** I received these buds from SoundPEATS for free, but do not receive payment for any review, and the brands sending me earbuds have no creative input into the content (otherwise I won't work with them). My full disclaimer is in the [About](/about/) section.
