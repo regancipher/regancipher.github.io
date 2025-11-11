@@ -6,7 +6,7 @@ permalink: /league-table/
 
 <style>
 .league-page {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 3rem 2rem;
 }
@@ -56,7 +56,6 @@ permalink: /league-table/
 }
 
 .league-table-wrapper {
-    overflow-x: auto;
     background: var(--secondary-bg);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -65,7 +64,7 @@ permalink: /league-table/
 .league-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .league-table thead {
@@ -76,13 +75,13 @@ permalink: /league-table/
 }
 
 .league-table th {
-    padding: 1rem 0.75rem;
+    padding: 0.75rem 0.5rem;
     text-align: left;
     font-weight: 700;
     color: var(--accent-color);
     font-family: var(--font-display);
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     letter-spacing: 0.05em;
     cursor: pointer;
     user-select: none;
@@ -118,7 +117,7 @@ permalink: /league-table/
 }
 
 .league-table td {
-    padding: 0.75rem;
+    padding: 0.6rem 0.5rem;
     color: var(--text-primary);
 }
 
@@ -153,18 +152,28 @@ permalink: /league-table/
     font-variant-numeric: tabular-nums;
 }
 
-@media (max-width: 768px) {
-    .league-page h1 {
-        font-size: 2rem;
-    }
-    
+@media (max-width: 1200px) {
     .league-table {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
     
     .league-table th,
     .league-table td {
-        padding: 0.5rem;
+        padding: 0.5rem 0.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .league-page {
+        padding: 2rem 1rem;
+    }
+    
+    .league-page h1 {
+        font-size: 2rem;
+    }
+    
+    .league-table-wrapper {
+        overflow-x: auto;
     }
 }
 </style>
@@ -191,16 +200,15 @@ permalink: /league-table/
                 <tr>
                     <th class="sortable" data-sort="brand">Brand</th>
                     <th class="sortable" data-sort="model">Model</th>
-                    <th class="sortable" data-sort="pricing">Pricing</th>
-                    <th class="sortable" data-sort="drivers">Drivers</th>
-                    <th class="sortable numeric-cell" data-sort="bass-quality">Bass Quality</th>
-                    <th class="sortable numeric-cell" data-sort="bass-quantity">Bass Quantity</th>
-                    <th class="sortable numeric-cell" data-sort="midrange">Midrange</th>
+                    <th class="sortable" data-sort="pricing">Price</th>
+                    <th class="sortable numeric-cell" data-sort="bass-quality">Bass Q</th>
+                    <th class="sortable numeric-cell" data-sort="bass-quantity">Bass Qty</th>
+                    <th class="sortable numeric-cell" data-sort="midrange">Mid</th>
                     <th class="sortable numeric-cell" data-sort="treble">Treble</th>
-                    <th class="sortable numeric-cell" data-sort="naturalness">Naturalness</th>
-                    <th class="sortable numeric-cell" data-sort="staging">Staging</th>
-                    <th class="sortable numeric-cell" data-sort="imaging">Imaging</th>
-                    <th class="sortable numeric-cell" data-sort="thd-95db">THD 95dB</th>
+                    <th class="sortable numeric-cell" data-sort="naturalness">Natural</th>
+                    <th class="sortable numeric-cell" data-sort="staging">Stage</th>
+                    <th class="sortable numeric-cell" data-sort="imaging">Image</th>
+                    <th class="sortable numeric-cell" data-sort="thd-95db">THD 95</th>
                     <th class="sortable numeric-cell" data-sort="thd-mi">THD Mi</th>
                     <th class="sortable numeric-cell" data-sort="custom">Custom</th>
                     <th class="sortable numeric-cell" data-sort="overall">Overall</th>
@@ -214,50 +222,50 @@ permalink: /league-table/
 
 <script>
 const tableData = [
-    {brand: "Geekfly", model: "Vitas", pricing: "£150+", drivers: "", bassQuality: 94, bassQuantity: 85, midrange: 93, treble: 96, naturalness: 89, staging: 95, imaging: 95, thd95db: 0.235, thdMi: 0.034, custom: 80, overall: 94.07},
-    {brand: "Huawei", model: "FreeBuds Pro 4", pricing: "£100-150", drivers: "", bassQuality: 82.5, bassQuantity: 80, midrange: 83, treble: 82.5, naturalness: 82, staging: 82, imaging: 83.5, thd95db: 0.595, thdMi: 0.152, custom: 84, overall: 83.1},
-    {brand: "Oppo", model: "Enco X2", pricing: "£100-150", drivers: "11mm DD + 6mm P", bassQuality: 82.5, bassQuantity: 77, midrange: 83.5, treble: 83, naturalness: 83, staging: 81, imaging: 83, thd95db: 0.682, thdMi: 0.117, custom: 81, overall: 83.1},
-    {brand: "SoundPEATS", model: "H3", pricing: "£100-150", drivers: "", bassQuality: 81, bassQuantity: 79, midrange: 81.5, treble: 83, naturalness: 80, staging: 83, imaging: 83.5, thd95db: 2.42, thdMi: 0.071, custom: 85, overall: 82.55},
-    {brand: "Moondrop", model: "Golden Ages 2", pricing: "£50-100", drivers: "", bassQuality: 80, bassQuantity: 75, midrange: 82.5, treble: 82, naturalness: 83, staging: 81, imaging: 82, thd95db: 0.304, thdMi: 0.027, custom: 88, overall: 82.39},
-    {brand: "Creative", model: "Aurvana Ace Mimi", pricing: "£100-150", drivers: "", bassQuality: 78.5, bassQuantity: 80.5, midrange: 83, treble: 83, naturalness: 81, staging: 82, imaging: 82, thd95db: 0.387, thdMi: 0.071, custom: 88, overall: 82.22},
-    {brand: "SoundPEATS", model: "Air5 Pro Plus", pricing: "£50-100", drivers: "", bassQuality: 80.5, bassQuantity: 80.5, midrange: 82.5, treble: 82.5, naturalness: 80.5, staging: 82, imaging: 82, thd95db: 0.403, thdMi: 0.043, custom: 85, overall: 82.22},
-    {brand: "Earfun", model: "Air Pro 4 Plus", pricing: "£50-100", drivers: "", bassQuality: 80, bassQuantity: 79, midrange: 82.5, treble: 82, naturalness: 81, staging: 82.5, imaging: 81.5, thd95db: 0.353, thdMi: 0.055, custom: 87, overall: 82.19},
-    {brand: "SoundPEATS", model: "Capsule3 Pro+", pricing: "£50-100", drivers: "12mm DD + XMEMS", bassQuality: 79, bassQuantity: 80, midrange: 82.5, treble: 83, naturalness: 80.5, staging: 82, imaging: 82, thd95db: 1.04, thdMi: 0.139, custom: 85, overall: 82.05},
-    {brand: "OnePlus", model: "Buds Pro 3", pricing: "£100-150", drivers: "", bassQuality: 82, bassQuantity: 83, midrange: 81, treble: 82, naturalness: 80, staging: 81.5, imaging: 82, thd95db: 0.383, thdMi: 0.131, custom: 84, overall: 81.94},
-    {brand: "Creative", model: "Aurvana Ace 2", pricing: "£100-150", drivers: "10mm DD + XMEMS", bassQuality: 78.5, bassQuantity: 80.5, midrange: 82, treble: 83, naturalness: 80, staging: 82, imaging: 82, thd95db: 0.73, thdMi: 0.097, custom: 88, overall: 81.89},
-    {brand: "QCY", model: "N70", pricing: "£30-50", drivers: "", bassQuality: 80, bassQuantity: 81.5, midrange: 81.5, treble: 83, naturalness: 80, staging: 81.5, imaging: 82, thd95db: 0.667, thdMi: 0.052, custom: 85, overall: 81.88},
-    {brand: "Samsung", model: "Galaxy Buds FE", pricing: "£50-100", drivers: "6.5mm DD", bassQuality: 80, bassQuantity: 80, midrange: 82, treble: 82, naturalness: 81, staging: 82, imaging: 81, thd95db: 0.328, thdMi: 0.069, custom: 75, overall: 81.58},
-    {brand: "Realme", model: "Buds Air 7", pricing: "£50-100", drivers: "", bassQuality: 80.5, bassQuantity: 83, midrange: 80, treble: 81, naturalness: 81, staging: 80.5, imaging: 81.5, thd95db: 0.389, thdMi: 0.142, custom: 84, overall: 81.27},
-    {brand: "OnePlus", model: "Buds 4", pricing: "£50-100", drivers: "", bassQuality: 80.5, bassQuantity: 83, midrange: 80, treble: 81, naturalness: 81, staging: 80.5, imaging: 81.5, thd95db: 0.349, thdMi: 0.069, custom: 84, overall: 81.27},
-    {brand: "Redmi", model: "Buds 6 Pro", pricing: "£50-100", drivers: "", bassQuality: 79, bassQuantity: 79, midrange: 81, treble: 80, naturalness: 81, staging: 80.5, imaging: 81, thd95db: 1.1, thdMi: 0.171, custom: 83, overall: 80.91},
-    {brand: "Moondrop", model: "Ultrasonic", pricing: "£50-100", drivers: "", bassQuality: 79, bassQuantity: 76, midrange: 81, treble: 82, naturalness: 82, staging: 79, imaging: 80, thd95db: 1.42, thdMi: 0.123, custom: 80, overall: 80.9},
-    {brand: "SoundPEATS", model: "Air5 Pro", pricing: "£50-100", drivers: "", bassQuality: 80, bassQuantity: 80.5, midrange: 81, treble: 81, naturalness: 80, staging: 80, imaging: 80, thd95db: 0.282, thdMi: 0.037, custom: 85, overall: 80.88},
-    {brand: "SoundPEATS", model: "Opera05", pricing: "£50-100", drivers: "", bassQuality: 80, bassQuantity: 79, midrange: 81, treble: 80.5, naturalness: 77, staging: 82, imaging: 81, thd95db: 1.87, thdMi: 0.197, custom: 85, overall: 80.8},
-    {brand: "Earfun", model: "Air Pro 4", pricing: "£50-100", drivers: "", bassQuality: 79, bassQuantity: 79, midrange: 81, treble: 81, naturalness: 81, staging: 79, imaging: 80, thd95db: 0.801, thdMi: 0.209, custom: 87, overall: 80.78},
-    {brand: "Soundcore", model: "Liberty 3 Pro", pricing: "£50-100", drivers: "", bassQuality: 80, bassQuantity: 83, midrange: 79.5, treble: 78, naturalness: 77, staging: 84, imaging: 82, thd95db: 3.27, thdMi: 0.259, custom: 89, overall: 80.75},
-    {brand: "Edifier", model: "NeoBuds Pro 2", pricing: "£100-150", drivers: "", bassQuality: 81, bassQuantity: 82, midrange: 81, treble: 80, naturalness: 78, staging: 80.5, imaging: 81, thd95db: 0.655, thdMi: 0.097, custom: 83, overall: 80.74},
-    {brand: "Vivo", model: "Vivo TWS4", pricing: "£50-100", drivers: "", bassQuality: 79, bassQuantity: 79, midrange: 81, treble: 81, naturalness: 80.5, staging: 80, imaging: 80, thd95db: 0.632, thdMi: 0.063, custom: 81, overall: 80.68},
-    {brand: "Realme", model: "Buds Air 5 Pro", pricing: "£50-100", drivers: "", bassQuality: 79, bassQuantity: 80, midrange: 81, treble: 80, naturalness: 79, staging: 80.5, imaging: 81, thd95db: 1.08, thdMi: 0.198, custom: 84, overall: 80.6},
-    {brand: "Realme", model: "Buds Air 6 Pro", pricing: "£50-100", drivers: "", bassQuality: 79, bassQuantity: 80, midrange: 81, treble: 80, naturalness: 79, staging: 80.5, imaging: 81, thd95db: 1.08, thdMi: 0.198, custom: 84, overall: 80.6},
-    {brand: "Moondrop", model: "Moca", pricing: "£30-50", drivers: "", bassQuality: 78, bassQuantity: 75, midrange: 81, treble: 81, naturalness: 81, staging: 80, imaging: 80, thd95db: 2.92, thdMi: 0.152, custom: 80, overall: 80.57},
-    {brand: "CMF", model: "Buds 2 Plus", pricing: "£50-100", drivers: "", bassQuality: 78, bassQuantity: 80, midrange: 80, treble: 81, naturalness: 80, staging: 80.5, imaging: 80, thd95db: 0.627, thdMi: 0.114, custom: 87, overall: 80.53},
-    {brand: "OnePlus", model: "Buds 3", pricing: "£50-100", drivers: "", bassQuality: 79, bassQuantity: 81, midrange: 81, treble: 79.5, naturalness: 80, staging: 80, imaging: 80.5, thd95db: 1.04, thdMi: 0.208, custom: 84, overall: 80.52},
-    {brand: "SoundPEATS", model: "Engine4", pricing: "£30-50", drivers: "", bassQuality: 78, bassQuantity: 82, midrange: 80, treble: 81, naturalness: 79, staging: 82, imaging: 79, thd95db: 7.29, thdMi: 0.335, custom: 85, overall: 80.38},
-    {brand: "QCY", model: "HT05 Melobuds", pricing: "£0-30", drivers: "", bassQuality: 78, bassQuantity: 77, midrange: 81, treble: 81, naturalness: 81, staging: 78, imaging: 80, thd95db: 0.468, thdMi: 0.091, custom: 85, overall: 80.38},
-    {brand: "Roseselsa", model: "Ceramics-X", pricing: "£30-50", drivers: "", bassQuality: 79, bassQuantity: 78, midrange: 81, treble: 80, naturalness: 81, staging: 79.5, imaging: 79, thd95db: 0.795, thdMi: 0.162, custom: 82, overall: 80.38},
-    {brand: "SoundPEATS", model: "Air4 Pro", pricing: "£50-100", drivers: "", bassQuality: 77, bassQuantity: 76, midrange: 81, treble: 81, naturalness: 80, staging: 80, imaging: 79, thd95db: 0.543, thdMi: 0.112, custom: 85, overall: 80.22},
-    {brand: "Moondrop", model: "Space Travel", pricing: "£0-30", drivers: "", bassQuality: 78, bassQuantity: 78, midrange: 81, treble: 81, naturalness: 82, staging: 78, imaging: 79, thd95db: 4.27, thdMi: 0.261, custom: 76, overall: 80.11},
-    {brand: "FIIL", model: "Key Pro", pricing: "£30-50", drivers: "", bassQuality: 77, bassQuantity: 78, midrange: 80, treble: 79, naturalness: 81, staging: 80, imaging: 80, thd95db: 1.12, thdMi: 0.116, custom: 85, overall: 80.05},
-    {brand: "QCY", model: "MeloBuds Pro", pricing: "£0-30", drivers: "", bassQuality: 77, bassQuantity: 77, midrange: 81, treble: 80, naturalness: 80, staging: 79, imaging: 80, thd95db: 0.518, thdMi: 0.089, custom: 85, overall: 80.05},
-    {brand: "Earfun", model: "Air 2 NC", pricing: "£30-50", drivers: "", bassQuality: 78, bassQuantity: 78, midrange: 81, treble: 81, naturalness: 80, staging: 77, imaging: 78, thd95db: 0.82, thdMi: 0.146, custom: 87, overall: 79.78},
-    {brand: "SoundPEATS", model: "Capsule3 Pro", pricing: "£0-30", drivers: "", bassQuality: 78, bassQuantity: 79, midrange: 81, treble: 78, naturalness: 81, staging: 79, imaging: 78, thd95db: 1.02, thdMi: 0.191, custom: 85, overall: 79.72},
-    {brand: "KZ", model: "Carol Pro", pricing: "£0-30", drivers: "", bassQuality: 78, bassQuantity: 83, midrange: 80, treble: 80, naturalness: 80, staging: 79.5, imaging: 79, thd95db: 0.442, thdMi: 0.092, custom: 0, overall: 79.42},
-    {brand: "KZ", model: "Xtra", pricing: "£0-30", drivers: "", bassQuality: 78, bassQuantity: 83, midrange: 80, treble: 80, naturalness: 79, staging: 79.5, imaging: 79, thd95db: 0.651, thdMi: 0.15, custom: 0, overall: 79.25},
-    {brand: "KZ", model: "Carol", pricing: "£0-30", drivers: "", bassQuality: 77, bassQuantity: 82, midrange: 80, treble: 80, naturalness: 79, staging: 79.5, imaging: 78, thd95db: 0.849, thdMi: 0.105, custom: 0, overall: 78.92},
-    {brand: "Soundcore", model: "Liberty 4 NC", pricing: "£50-100", drivers: "", bassQuality: 76, bassQuantity: 85, midrange: 78, treble: 77, naturalness: 78, staging: 79, imaging: 79.5, thd95db: 0, thdMi: 0, custom: 89, overall: 78.59},
-    {brand: "Soundcore", model: "Space A40", pricing: "£50-100", drivers: "", bassQuality: 75, bassQuantity: 68, midrange: 79, treble: 73, naturalness: 76.5, staging: 75, imaging: 78, thd95db: 0.652, thdMi: 0.084, custom: 89, overall: 76.75},
-    {brand: "Earfun", model: "Air Pro 3", pricing: "£50-100", drivers: "", bassQuality: 71, bassQuantity: 89, midrange: 74, treble: 72, naturalness: 75, staging: 77, imaging: 75, thd95db: 3.54, thdMi: 0.186, custom: 86, overall: 74.58},
-    {brand: "Soundcore", model: "P3i", pricing: "£30-50", drivers: "", bassQuality: 71, bassQuantity: 86, midrange: 74, treble: 70, naturalness: 73, staging: 75, imaging: 70, thd95db: 1.05, thdMi: 0.203, custom: 89, overall: 72.84}
+    {brand: "Geekfly", model: "Vitas", pricing: "£150+", bassQuality: 94, bassQuantity: 85, midrange: 93, treble: 96, naturalness: 89, staging: 95, imaging: 95, thd95db: 0.235, thdMi: 0.034, custom: 80, overall: 94.07},
+    {brand: "Huawei", model: "FreeBuds Pro 4", pricing: "£100-150", bassQuality: 82.5, bassQuantity: 80, midrange: 83, treble: 82.5, naturalness: 82, staging: 82, imaging: 83.5, thd95db: 0.595, thdMi: 0.152, custom: 84, overall: 83.1},
+    {brand: "Oppo", model: "Enco X2", pricing: "£100-150", bassQuality: 82.5, bassQuantity: 77, midrange: 83.5, treble: 83, naturalness: 83, staging: 81, imaging: 83, thd95db: 0.682, thdMi: 0.117, custom: 81, overall: 83.1},
+    {brand: "SoundPEATS", model: "H3", pricing: "£100-150", bassQuality: 81, bassQuantity: 79, midrange: 81.5, treble: 83, naturalness: 80, staging: 83, imaging: 83.5, thd95db: 2.42, thdMi: 0.071, custom: 85, overall: 82.55},
+    {brand: "Moondrop", model: "Golden Ages 2", pricing: "£50-100", bassQuality: 80, bassQuantity: 75, midrange: 82.5, treble: 82, naturalness: 83, staging: 81, imaging: 82, thd95db: 0.304, thdMi: 0.027, custom: 88, overall: 82.39},
+    {brand: "Creative", model: "Aurvana Ace Mimi", pricing: "£100-150", bassQuality: 78.5, bassQuantity: 80.5, midrange: 83, treble: 83, naturalness: 81, staging: 82, imaging: 82, thd95db: 0.387, thdMi: 0.071, custom: 88, overall: 82.22},
+    {brand: "SoundPEATS", model: "Air5 Pro Plus", pricing: "£50-100", bassQuality: 80.5, bassQuantity: 80.5, midrange: 82.5, treble: 82.5, naturalness: 80.5, staging: 82, imaging: 82, thd95db: 0.403, thdMi: 0.043, custom: 85, overall: 82.22},
+    {brand: "Earfun", model: "Air Pro 4 Plus", pricing: "£50-100", bassQuality: 80, bassQuantity: 79, midrange: 82.5, treble: 82, naturalness: 81, staging: 82.5, imaging: 81.5, thd95db: 0.353, thdMi: 0.055, custom: 87, overall: 82.19},
+    {brand: "SoundPEATS", model: "Capsule3 Pro+", pricing: "£50-100", bassQuality: 79, bassQuantity: 80, midrange: 82.5, treble: 83, naturalness: 80.5, staging: 82, imaging: 82, thd95db: 1.04, thdMi: 0.139, custom: 85, overall: 82.05},
+    {brand: "OnePlus", model: "Buds Pro 3", pricing: "£100-150", bassQuality: 82, bassQuantity: 83, midrange: 81, treble: 82, naturalness: 80, staging: 81.5, imaging: 82, thd95db: 0.383, thdMi: 0.131, custom: 84, overall: 81.94},
+    {brand: "Creative", model: "Aurvana Ace 2", pricing: "£100-150", bassQuality: 78.5, bassQuantity: 80.5, midrange: 82, treble: 83, naturalness: 80, staging: 82, imaging: 82, thd95db: 0.73, thdMi: 0.097, custom: 88, overall: 81.89},
+    {brand: "QCY", model: "N70", pricing: "£30-50", bassQuality: 80, bassQuantity: 81.5, midrange: 81.5, treble: 83, naturalness: 80, staging: 81.5, imaging: 82, thd95db: 0.667, thdMi: 0.052, custom: 85, overall: 81.88},
+    {brand: "Samsung", model: "Galaxy Buds FE", pricing: "£50-100", bassQuality: 80, bassQuantity: 80, midrange: 82, treble: 82, naturalness: 81, staging: 82, imaging: 81, thd95db: 0.328, thdMi: 0.069, custom: 75, overall: 81.58},
+    {brand: "Realme", model: "Buds Air 7", pricing: "£50-100", bassQuality: 80.5, bassQuantity: 83, midrange: 80, treble: 81, naturalness: 81, staging: 80.5, imaging: 81.5, thd95db: 0.389, thdMi: 0.142, custom: 84, overall: 81.27},
+    {brand: "OnePlus", model: "Buds 4", pricing: "£50-100", bassQuality: 80.5, bassQuantity: 83, midrange: 80, treble: 81, naturalness: 81, staging: 80.5, imaging: 81.5, thd95db: 0.349, thdMi: 0.069, custom: 84, overall: 81.27},
+    {brand: "Redmi", model: "Buds 6 Pro", pricing: "£50-100", bassQuality: 79, bassQuantity: 79, midrange: 81, treble: 80, naturalness: 81, staging: 80.5, imaging: 81, thd95db: 1.1, thdMi: 0.171, custom: 83, overall: 80.91},
+    {brand: "Moondrop", model: "Ultrasonic", pricing: "£50-100", bassQuality: 79, bassQuantity: 76, midrange: 81, treble: 82, naturalness: 82, staging: 79, imaging: 80, thd95db: 1.42, thdMi: 0.123, custom: 80, overall: 80.9},
+    {brand: "SoundPEATS", model: "Air5 Pro", pricing: "£50-100", bassQuality: 80, bassQuantity: 80.5, midrange: 81, treble: 81, naturalness: 80, staging: 80, imaging: 80, thd95db: 0.282, thdMi: 0.037, custom: 85, overall: 80.88},
+    {brand: "SoundPEATS", model: "Opera05", pricing: "£50-100", bassQuality: 80, bassQuantity: 79, midrange: 81, treble: 80.5, naturalness: 77, staging: 82, imaging: 81, thd95db: 1.87, thdMi: 0.197, custom: 85, overall: 80.8},
+    {brand: "Earfun", model: "Air Pro 4", pricing: "£50-100", bassQuality: 79, bassQuantity: 79, midrange: 81, treble: 81, naturalness: 81, staging: 79, imaging: 80, thd95db: 0.801, thdMi: 0.209, custom: 87, overall: 80.78},
+    {brand: "Soundcore", model: "Liberty 3 Pro", pricing: "£50-100", bassQuality: 80, bassQuantity: 83, midrange: 79.5, treble: 78, naturalness: 77, staging: 84, imaging: 82, thd95db: 3.27, thdMi: 0.259, custom: 89, overall: 80.75},
+    {brand: "Edifier", model: "NeoBuds Pro 2", pricing: "£100-150", bassQuality: 81, bassQuantity: 82, midrange: 81, treble: 80, naturalness: 78, staging: 80.5, imaging: 81, thd95db: 0.655, thdMi: 0.097, custom: 83, overall: 80.74},
+    {brand: "Vivo", model: "Vivo TWS4", pricing: "£50-100", bassQuality: 79, bassQuantity: 79, midrange: 81, treble: 81, naturalness: 80.5, staging: 80, imaging: 80, thd95db: 0.632, thdMi: 0.063, custom: 81, overall: 80.68},
+    {brand: "Realme", model: "Buds Air 5 Pro", pricing: "£50-100", bassQuality: 79, bassQuantity: 80, midrange: 81, treble: 80, naturalness: 79, staging: 80.5, imaging: 81, thd95db: 1.08, thdMi: 0.198, custom: 84, overall: 80.6},
+    {brand: "Realme", model: "Buds Air 6 Pro", pricing: "£50-100", bassQuality: 79, bassQuantity: 80, midrange: 81, treble: 80, naturalness: 79, staging: 80.5, imaging: 81, thd95db: 1.08, thdMi: 0.198, custom: 84, overall: 80.6},
+    {brand: "Moondrop", model: "Moca", pricing: "£30-50", bassQuality: 78, bassQuantity: 75, midrange: 81, treble: 81, naturalness: 81, staging: 80, imaging: 80, thd95db: 2.92, thdMi: 0.152, custom: 80, overall: 80.57},
+    {brand: "CMF", model: "Buds 2 Plus", pricing: "£50-100", bassQuality: 78, bassQuantity: 80, midrange: 80, treble: 81, naturalness: 80, staging: 80.5, imaging: 80, thd95db: 0.627, thdMi: 0.114, custom: 87, overall: 80.53},
+    {brand: "OnePlus", model: "Buds 3", pricing: "£50-100", bassQuality: 79, bassQuantity: 81, midrange: 81, treble: 79.5, naturalness: 80, staging: 80, imaging: 80.5, thd95db: 1.04, thdMi: 0.208, custom: 84, overall: 80.52},
+    {brand: "SoundPEATS", model: "Engine4", pricing: "£30-50", bassQuality: 78, bassQuantity: 82, midrange: 80, treble: 81, naturalness: 79, staging: 82, imaging: 79, thd95db: 7.29, thdMi: 0.335, custom: 85, overall: 80.38},
+    {brand: "QCY", model: "HT05 Melobuds", pricing: "£0-30", bassQuality: 78, bassQuantity: 77, midrange: 81, treble: 81, naturalness: 81, staging: 78, imaging: 80, thd95db: 0.468, thdMi: 0.091, custom: 85, overall: 80.38},
+    {brand: "Roseselsa", model: "Ceramics-X", pricing: "£30-50", bassQuality: 79, bassQuantity: 78, midrange: 81, treble: 80, naturalness: 81, staging: 79.5, imaging: 79, thd95db: 0.795, thdMi: 0.162, custom: 82, overall: 80.38},
+    {brand: "SoundPEATS", model: "Air4 Pro", pricing: "£50-100", bassQuality: 77, bassQuantity: 76, midrange: 81, treble: 81, naturalness: 80, staging: 80, imaging: 79, thd95db: 0.543, thdMi: 0.112, custom: 85, overall: 80.22},
+    {brand: "Moondrop", model: "Space Travel", pricing: "£0-30", bassQuality: 78, bassQuantity: 78, midrange: 81, treble: 81, naturalness: 82, staging: 78, imaging: 79, thd95db: 4.27, thdMi: 0.261, custom: 76, overall: 80.11},
+    {brand: "FIIL", model: "Key Pro", pricing: "£30-50", bassQuality: 77, bassQuantity: 78, midrange: 80, treble: 79, naturalness: 81, staging: 80, imaging: 80, thd95db: 1.12, thdMi: 0.116, custom: 85, overall: 80.05},
+    {brand: "QCY", model: "MeloBuds Pro", pricing: "£0-30", bassQuality: 77, bassQuantity: 77, midrange: 81, treble: 80, naturalness: 80, staging: 79, imaging: 80, thd95db: 0.518, thdMi: 0.089, custom: 85, overall: 80.05},
+    {brand: "Earfun", model: "Air 2 NC", pricing: "£30-50", bassQuality: 78, bassQuantity: 78, midrange: 81, treble: 81, naturalness: 80, staging: 77, imaging: 78, thd95db: 0.82, thdMi: 0.146, custom: 87, overall: 79.78},
+    {brand: "SoundPEATS", model: "Capsule3 Pro", pricing: "£0-30", bassQuality: 78, bassQuantity: 79, midrange: 81, treble: 78, naturalness: 81, staging: 79, imaging: 78, thd95db: 1.02, thdMi: 0.191, custom: 85, overall: 79.72},
+    {brand: "KZ", model: "Carol Pro", pricing: "£0-30", bassQuality: 78, bassQuantity: 83, midrange: 80, treble: 80, naturalness: 80, staging: 79.5, imaging: 79, thd95db: 0.442, thdMi: 0.092, custom: 0, overall: 79.42},
+    {brand: "KZ", model: "Xtra", pricing: "£0-30", bassQuality: 78, bassQuantity: 83, midrange: 80, treble: 80, naturalness: 79, staging: 79.5, imaging: 79, thd95db: 0.651, thdMi: 0.15, custom: 0, overall: 79.25},
+    {brand: "KZ", model: "Carol", pricing: "£0-30", bassQuality: 77, bassQuantity: 82, midrange: 80, treble: 80, naturalness: 79, staging: 79.5, imaging: 78, thd95db: 0.849, thdMi: 0.105, custom: 0, overall: 78.92},
+    {brand: "Soundcore", model: "Liberty 4 NC", pricing: "£50-100", bassQuality: 76, bassQuantity: 85, midrange: 78, treble: 77, naturalness: 78, staging: 79, imaging: 79.5, thd95db: 0, thdMi: 0, custom: 89, overall: 78.59},
+    {brand: "Soundcore", model: "Space A40", pricing: "£50-100", bassQuality: 75, bassQuantity: 68, midrange: 79, treble: 73, naturalness: 76.5, staging: 75, imaging: 78, thd95db: 0.652, thdMi: 0.084, custom: 89, overall: 76.75},
+    {brand: "Earfun", model: "Air Pro 3", pricing: "£50-100", bassQuality: 71, bassQuantity: 89, midrange: 74, treble: 72, naturalness: 75, staging: 77, imaging: 75, thd95db: 3.54, thdMi: 0.186, custom: 86, overall: 74.58},
+    {brand: "Soundcore", model: "P3i", pricing: "£30-50", bassQuality: 71, bassQuantity: 86, midrange: 74, treble: 70, naturalness: 73, staging: 75, imaging: 70, thd95db: 1.05, thdMi: 0.203, custom: 89, overall: 72.84}
 ];
 
 let currentSort = {column: 'overall', direction: 'desc'};
@@ -278,7 +286,6 @@ function renderTable(data) {
             <td class="brand-cell">${row.brand}</td>
             <td class="model-cell">${row.model}</td>
             <td>${row.pricing}</td>
-            <td>${row.drivers}</td>
             <td class="numeric-cell">${row.bassQuality}</td>
             <td class="numeric-cell">${row.bassQuantity}</td>
             <td class="numeric-cell">${row.midrange}</td>
@@ -312,7 +319,6 @@ function sortTable(column) {
             case 'brand': aVal = a.brand; bVal = b.brand; break;
             case 'model': aVal = a.model; bVal = b.model; break;
             case 'pricing': aVal = a.pricing; bVal = b.pricing; break;
-            case 'drivers': aVal = a.drivers; bVal = b.drivers; break;
             case 'bass-quality': aVal = a.bassQuality; bVal = b.bassQuality; break;
             case 'bass-quantity': aVal = a.bassQuantity; bVal = b.bassQuantity; break;
             case 'midrange': aVal = a.midrange; bVal = b.midrange; break;
@@ -344,11 +350,18 @@ function filterTable() {
         row.brand.toLowerCase().includes(searchTerm) || 
         row.model.toLowerCase().includes(searchTerm)
     );
-    renderTable(filtered);
+    
+    // Re-sort filtered results
+    const sorted = [...filtered].sort((a, b) => {
+        return currentSort.direction === 'asc' ? a.overall - b.overall : b.overall - a.overall;
+    });
+    
+    renderTable(sorted);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    renderTable(tableData);
+    // Initialize with descending overall sort
+    sortTable('overall');
     
     document.querySelectorAll('.league-table th.sortable').forEach(th => {
         th.addEventListener('click', () => {
@@ -357,7 +370,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     document.getElementById('searchInput').addEventListener('input', filterTable);
-    
-    sortTable('overall');
 });
 </script>
