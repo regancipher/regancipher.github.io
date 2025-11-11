@@ -200,11 +200,6 @@ layout: default
     letter-spacing: 0.05em;
 }
 
-/* HIDE the Specifications heading in content */
-.review-content h2:first-of-type {
-    display: none;
-}
-
 .review-content h3 {
     font-family: var(--font-display);
     font-size: 1.5rem;
@@ -216,6 +211,7 @@ layout: default
 
 .review-content p {
     margin-bottom: 1.5rem;
+    color: var(--secondary-bg);
 }
 
 .review-content img {
@@ -235,11 +231,6 @@ layout: default
 
 .review-content a:hover {
     color: var(--secondary-bg);
-}
-
-/* HIDE the first table in content (specs table) */
-.review-content table:first-of-type {
-    display: none;
 }
 
 .review-content table {
@@ -269,6 +260,7 @@ layout: default
 .review-content ul, .review-content ol {
     margin-bottom: 1.5rem;
     margin-left: 2rem;
+    color: var(--secondary-bg);
 }
 
 .review-content li {
@@ -279,6 +271,10 @@ layout: default
     border: none;
     border-top: 2px solid rgba(26, 31, 40, 0.2);
     margin: 3rem 0;
+}
+
+.review-content strong {
+    color: var(--secondary-bg);
 }
 
 /* Disclosure box */
