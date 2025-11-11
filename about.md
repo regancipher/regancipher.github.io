@@ -163,7 +163,8 @@ permalink: /about/
 
 <ul>
 <li>🎥 <strong>YouTube:</strong> <a href="https://youtube.com/@regancipher">ReganCipher</a></li>
-<li>💻 <strong>GitHub:</strong> <a href="https://github.com/regancipher">regancipher</a></li>
+<li>💻 <strong>Reddit:</strong> <a href="https://reddit.com/u/Radiant-Cherry-7973">Radiant Cherry!</a></li>
+<li>💻 <strong>Head-Fi:</strong> <a href="https://www.head-fi.org/members/regancipher.535074/">regancipher</a></li>
 <li>🔗 <strong>My Links:</strong> <a href="https://linktr.ee/rcaudio">Linktree</a></li>
 <li>📊 <strong>Measurements:</strong> <a href="https://regancipher.squig.link/">Squiglink</a></li>
 </ul>
