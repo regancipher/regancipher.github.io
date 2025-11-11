@@ -10,7 +10,7 @@ verdict: "An ambitious approach to the sound delivers the goods, but at the cost
 
 image: /assets/images/reviews/soundpeats-h3/hero.jpg
 measurement_url: "https://regancipher.squig.link/?share=SoundPEATS_H3"
-youtube_id: "https://youtu.be/0Mr1UBuMqeE"
+youtube_id: "0Mr1UBuMqeE"
 
 category: iems
 tags:
