@@ -153,7 +153,7 @@ permalink: /reviews/
     .reviews-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .reviews-page h1 {
         font-size: 2rem;
     }
@@ -163,8 +163,8 @@ permalink: /reviews/
 <div class="reviews-page">
     <h1>Reviews</h1>
     <p class="reviews-intro">
-        In-depth reviews of TWS earbuds, headphones, and DACs. Every review includes frequency response measurements, 
-        binaural sound samples, and real-world testing.
+        TWS reviews: On YouTube and in text format. The videos include frequency response and sound 'quality' measurements,
+        binaural sound and ANC samples, and call samples in typical real-life scenes (no simulated background noise or waving a fan around!)
     </p>
 
     <div class="reviews-grid">
@@ -178,10 +178,10 @@ permalink: /reviews/
                 {% endif %}
             </div>
             {% endif %}
-            
+
             <div class="review-content">
                 <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                
+
                 <div class="review-meta">
                     <span class="brand">{{ post.brand }}</span>
                     <span>•</span>
@@ -191,15 +191,15 @@ permalink: /reviews/
                         {{ post.date | date: "%B %d, %Y" }}
                     </time>
                 </div>
-                
+
                 <p class="review-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-                
+
                 {% if post.verdict %}
                 <div class="review-verdict">
                     <strong>Verdict:</strong> {{ post.verdict }}
                 </div>
                 {% endif %}
-                
+
                 <a href="{{ post.url | relative_url }}" class="read-more">Read Full Review →</a>
             </div>
         </article>
