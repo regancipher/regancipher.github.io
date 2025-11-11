@@ -165,9 +165,7 @@ In busier environments, the noise reduction algorithm steps back a little, prior
 
 ## Summary
 
-<div style="text-align: center; margin: 2rem 0;">
-    <img src="/assets/images/reviews/soundpeats-h3/8.jpg" alt="Final thoughts" style="max-width: 100%; border-radius: 12px;">
-</div>
+![Final thoughts](/assets/images/reviews/soundpeats-h3/8.jpg)
 
 The SoundPEATS H3 doesn't shirk its priorities - it delivers genuinely well-rounded technical audio performance that rivals products at significantly higher price points, particularly in its imaging and soundstage capabilities, that surpasssed my expectation in a mid-budget true wireless offering.
 
