@@ -77,8 +77,8 @@ permalink: /about/
 <div class="about-hero">
     <img src="/assets/images/djing-portrait.jpg" alt="Regan DJing">
     <div>
-        <h2 style="margin-top: 0;">From the Decks to the Desk</h2>
         <p>Hi, I'm Regan Cipher - welcome to my long awaited blog and review site. Many of you will know me from my YouTube channel or presence on Head-Fi or Reddit, but a little bit of background - before I was analyzing frequency responses, I was creating them.</p>
+
 
         <p>During the late 90's and early 2000's, I DJ'd to dancefloors in the UK, Ibiza, Scandinavia and Central Europe, and as a producer churned out a few minor releases. Whilst we didn't quite hit the heights of the likes of Calvin Harris and the Swedish House Mafia, we did share the decks with them a few times! This grounding gave me an intimate understanding of how music should sound on consumer audio gear.</p>
 
