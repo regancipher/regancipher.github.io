@@ -1,7 +1,7 @@
 ---
 layout: review
 title: "Creative Aurvana Ace Mimi"
-date: 2025-XX-XX
+date: 2025-04-04
 brand: "Creative"
 model: "Aurvana Ace Mimi"
 price: "£79.99"
@@ -110,11 +110,11 @@ On the positive side, transparency mode is cleaner than the previous model with 
 
 ## Audio & Sound Signature
 
-![ANC on vs off](/assets/images/reviews/creative-mimi/anc-on-vs-off.png)
+![ANC on vs off](/assets/images/reviews/creative-mimi/anc_on_vs_off.png)
 
 The dual driver configuration pairs an XMEMS solid-state driver handling mids and treble with a 10mm dynamic driver for bass. This results in excellent performance in the mid and high frequencies, where the XMEMS technology shines with fast transients, detailed instrument separation, and natural-sounding yet highly polished treble extension that combines air and precision without hitting hitting the point of fatigue. If you listen to tracks heavy on percussion, you'll notice that the trebles aren't perfect - there's a slight scratchiness at higher volumes, but overall it's a big improvement from single DD's or the unnatural taste of balanced armatures.
 
-![vs Aurvana Ace 2](/assets/images/reviews/creative-mimi/vs-aurvana-ace-2.png)
+![vs Aurvana Ace 2](/assets/images/reviews/creative-mimi/vs_aurvana_ace_2.png)
 
 The bass response, while slightly improved over the Ace 2 with reduced mid-bass bloat, still lacks the punch and definition to match the precision of the mids and highs. Bass notes tend to linger a bit longer than ideal, creating a slight disconnect between the tight, articulate upper frequencies and the softer, less defined low end. It sounds like Creative simply adjusted the variables to improve the tuning, rather than use a different dynamic driver, so whilst the end result is slightly-more cohesive than the Ace 2, it still isn't ideal.
 
