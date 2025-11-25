@@ -301,13 +301,17 @@ function initChart() {
                     grid: { color: '#3a3f48' }
                 },
                 y: {
+                    min: -20,
+                    max: 45,
                     title: {
                         display: true,
                         text: 'SPL (dB)',
                         color: '#d4af37',
                         font: { family: "'Space Grotesk', sans-serif", size: 14, weight: 'bold' }
                     },
-                    ticks: { color: '#e6edf3' },
+                    ticks: { 
+                        display: false
+                    },
                     grid: { color: '#3a3f48' }
                 }
             },
