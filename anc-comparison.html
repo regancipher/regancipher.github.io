@@ -117,7 +117,7 @@ permalink: /anc-comparison/
 
 #ancChart {
     width: 100%;
-    height: 600px;
+    height: 450px !important;
 }
 
 .legend-note {
@@ -131,13 +131,13 @@ permalink: /anc-comparison/
     .anc-page h1 {
         font-size: 2rem;
     }
-
+    
     .product-selectors {
         grid-template-columns: 1fr;
     }
-
+    
     #ancChart {
-        height: 400px;
+        height: 350px !important;
     }
 }
 </style>
@@ -145,7 +145,7 @@ permalink: /anc-comparison/
 <div class="anc-page">
     <h1>ANC & Transparency Comparison</h1>
     <p class="anc-intro">
-        Interactive comparison of active noise cancellation and transparency mode performance.
+        Interactive comparison of active noise cancellation and transparency mode performance. 
         Compare up to 4 products against the ENV baseline (pink noise reference).
     </p>
 
@@ -194,7 +194,6 @@ permalink: /anc-comparison/
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="/assets/data/anc-data.js"></script>
 <script>
-// Product list - extracted from measurement data
 const products = [
     'Creative Aurvana Ace 2',
     'Creative Aurvana Ace Mimi',
@@ -217,15 +216,8 @@ const products = [
 let currentMode = 'anc';
 let chart = null;
 
-// Color palette for products
-const colors = [
-    '#d4af37', // Gold
-    '#3fb950', // Green
-    '#f85149', // Red
-    '#58a6ff'  // Blue
-];
+const colors = ['#d4af37', '#3fb950', '#f85149', '#58a6ff'];
 
-// Initialize
 document.addEventListener('DOMContentLoaded', () => {
     populateSelectors();
     initChart();
@@ -233,13 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function populateSelectors() {
-    const selects = [
-        document.getElementById('product1'),
-        document.getElementById('product2'),
-        document.getElementById('product3'),
-        document.getElementById('product4')
-    ];
-
+    const selects = ['product1', 'product2', 'product3', 'product4'].map(id => document.getElementById(id));
     products.forEach(product => {
         selects.forEach(select => {
             const option = document.createElement('option');
@@ -252,35 +238,27 @@ function populateSelectors() {
 
 function switchMode(mode) {
     currentMode = mode;
-
-    // Update button states
-    document.querySelectorAll('.mode-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-
-    if (mode === 'anc') {
-        document.getElementById('ancBtn').classList.add('active');
-    } else {
-        document.getElementById('transBtn').classList.add('active');
-    }
-
+    document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(mode === 'anc' ? 'ancBtn' : 'transBtn').classList.add('active');
     updateChart();
 }
 
 function initChart() {
     const ctx = document.getElementById('ancChart').getContext('2d');
-
+    
     chart = new Chart(ctx, {
         type: 'line',
-        data: {
-            datasets: []
-        },
+        data: { datasets: [] },
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            animation: false,
+            parsing: false,
+            normalized: true,
             interaction: {
-                mode: 'index',
-                intersect: false,
+                mode: 'nearest',
+                axis: 'x',
+                intersect: false
             },
             plugins: {
                 legend: {
@@ -288,13 +266,13 @@ function initChart() {
                     position: 'top',
                     labels: {
                         color: '#e6edf3',
-                        font: {
-                            family: "'Space Grotesk', sans-serif",
-                            size: 12
-                        }
+                        font: { family: "'Space Grotesk', sans-serif", size: 12 },
+                        padding: 15,
+                        usePointStyle: true
                     }
                 },
                 tooltip: {
+                    enabled: true,
                     backgroundColor: '#1a1f28',
                     titleColor: '#d4af37',
                     bodyColor: '#e6edf3',
@@ -311,43 +289,36 @@ function initChart() {
                         display: true,
                         text: 'Frequency (Hz)',
                         color: '#d4af37',
-                        font: {
-                            family: "'Space Grotesk', sans-serif",
-                            size: 14,
-                            weight: 'bold'
-                        }
+                        font: { family: "'Space Grotesk', sans-serif", size: 14, weight: 'bold' }
                     },
                     ticks: {
                         color: '#e6edf3',
                         callback: function(value) {
                             const labels = [20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000];
-                            if (labels.includes(value)) {
-                                return value >= 1000 ? (value/1000) + 'k' : value;
-                            }
-                            return '';
+                            return labels.includes(value) ? (value >= 1000 ? (value/1000) + 'k' : value) : '';
                         }
                     },
-                    grid: {
-                        color: '#3a3f48'
-                    }
+                    grid: { color: '#3a3f48' }
                 },
                 y: {
                     title: {
                         display: true,
                         text: 'SPL (dB)',
                         color: '#d4af37',
-                        font: {
-                            family: "'Space Grotesk', sans-serif",
-                            size: 14,
-                            weight: 'bold'
-                        }
+                        font: { family: "'Space Grotesk', sans-serif", size: 14, weight: 'bold' }
                     },
-                    ticks: {
-                        color: '#e6edf3'
-                    },
-                    grid: {
-                        color: '#3a3f48'
-                    }
+                    ticks: { color: '#e6edf3' },
+                    grid: { color: '#3a3f48' }
+                }
+            },
+            elements: {
+                line: {
+                    tension: 0
+                },
+                point: {
+                    radius: 0,
+                    hitRadius: 0,
+                    hoverRadius: 0
                 }
             }
         }
@@ -355,46 +326,32 @@ function initChart() {
 }
 
 function updateChart() {
-    const datasets = [];
-
-    // Always add ENV baseline
-    datasets.push({
+    const datasets = [{
         label: 'ENV (Baseline)',
         data: measurements.env,
         borderColor: '#6e7681',
         backgroundColor: 'transparent',
-        borderWidth: 2,
-        pointRadius: 0,
-        tension: 0.1
-    });
-
-    // Add selected products
-    const selects = ['product1', 'product2', 'product3', 'product4'];
-    let colorIndex = 0;
-
-    selects.forEach(selectId => {
-        const product = document.getElementById(selectId).value;
+        borderWidth: 2
+    }];
+    
+    ['product1', 'product2', 'product3', 'product4'].forEach((id, i) => {
+        const product = document.getElementById(id).value;
         if (product) {
-            // Look for product with mode suffix
             const key = product + ' ' + (currentMode === 'anc' ? 'ANC' : 'Transparency');
             const data = measurements[currentMode][key];
-
             if (data) {
                 datasets.push({
                     label: product,
                     data: data,
-                    borderColor: colors[colorIndex],
+                    borderColor: colors[i],
                     backgroundColor: 'transparent',
-                    borderWidth: 3,
-                    pointRadius: 0,
-                    tension: 0.1
+                    borderWidth: 2.5
                 });
-                colorIndex++;
             }
         }
     });
-
+    
     chart.data.datasets = datasets;
-    chart.update();
+    chart.update('none');
 }
 </script>
