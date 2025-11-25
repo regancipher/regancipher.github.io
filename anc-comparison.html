@@ -187,7 +187,7 @@ permalink: /anc-comparison/
 
     <div class="chart-wrapper">
         <canvas id="ancChart"></canvas>
-        <p class="legend-note">Lower SPL = better noise cancellation. Values show sound pressure level measured at ear - compare relative performance between products.</p>
+        <p class="legend-note">ENV (gray) shows pink noise baseline. Lower SPL = better ANC performance. Compare lines relative to baseline and each other.</p>
     </div>
 </div>
 
@@ -326,7 +326,13 @@ function initChart() {
 }
 
 function updateChart() {
-    const datasets = [];
+    const datasets = [{
+        label: 'ENV (Baseline)',
+        data: measurements.env,
+        borderColor: '#6e7681',
+        backgroundColor: 'transparent',
+        borderWidth: 2
+    }];
     
     ['product1', 'product2', 'product3', 'product4'].forEach((id, i) => {
         const product = document.getElementById(id).value;
