@@ -1,0 +1,400 @@
+---
+layout: default
+title: ANC & Transparency Comparison
+permalink: /anc-comparison/
+---
+
+<style>
+.anc-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.anc-page h1 {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--secondary-bg);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.anc-intro {
+    text-align: center;
+    color: var(--secondary-bg);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.controls {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.control-group {
+    margin-bottom: 1.5rem;
+}
+
+.control-group label {
+    display: block;
+    color: var(--accent-color);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.mode-toggle {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 1rem;
+    background: var(--tertiary-bg);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.mode-btn.active {
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    border-color: var(--accent-color);
+}
+
+.product-selectors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.product-selector select {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--tertiary-bg);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.product-selector select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.chart-wrapper {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+#ancChart {
+    width: 100%;
+    height: 600px;
+}
+
+.legend-note {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .anc-page h1 {
+        font-size: 2rem;
+    }
+
+    .product-selectors {
+        grid-template-columns: 1fr;
+    }
+
+    #ancChart {
+        height: 400px;
+    }
+}
+</style>
+
+<div class="anc-page">
+    <h1>ANC & Transparency Comparison</h1>
+    <p class="anc-intro">
+        Interactive comparison of active noise cancellation and transparency mode performance.
+        Compare up to 4 products against the ENV baseline (pink noise reference).
+    </p>
+
+    <div class="controls">
+        <div class="control-group">
+            <label>Mode</label>
+            <div class="mode-toggle">
+                <button class="mode-btn active" id="ancBtn" onclick="switchMode('anc')">ANC</button>
+                <button class="mode-btn" id="transBtn" onclick="switchMode('transparency')">Transparency</button>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label>Select Products (Max 4)</label>
+            <div class="product-selectors">
+                <div class="product-selector">
+                    <select id="product1" onchange="updateChart()">
+                        <option value="">-- Select Product 1 --</option>
+                    </select>
+                </div>
+                <div class="product-selector">
+                    <select id="product2" onchange="updateChart()">
+                        <option value="">-- Select Product 2 --</option>
+                    </select>
+                </div>
+                <div class="product-selector">
+                    <select id="product3" onchange="updateChart()">
+                        <option value="">-- Select Product 3 --</option>
+                    </select>
+                </div>
+                <div class="product-selector">
+                    <select id="product4" onchange="updateChart()">
+                        <option value="">-- Select Product 4 --</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-wrapper">
+        <canvas id="ancChart"></canvas>
+        <p class="legend-note">ENV (gray) is the baseline pink noise reference. Lower dB = better noise cancellation.</p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/assets/data/anc-data.js"></script>
+<script>
+// Product list - extracted from measurement data
+const products = [
+    'Creative Aurvana Ace 2',
+    'Creative Aurvana Ace Mimi',
+    'Earfun Air Pro 4',
+    'Earfun Air Pro 4 Plus',
+    'Huawei Freebuds Pro 4',
+    'Moondrop GA2',
+    'Moondrop Space Travel 2',
+    'OnePlus Buds 4',
+    'OnePlus Buds Pro 3',
+    'QCY MeloBuds Pro',
+    'QCY N70',
+    'Realme 7 Pro',
+    'Samsung Buds FE',
+    'SoundPEATS Air5 Pro',
+    'SoundPEATS Air5 Pro Plus',
+    'SoundPEATS H3'
+].sort();
+
+let currentMode = 'anc';
+let chart = null;
+
+// Color palette for products
+const colors = [
+    '#d4af37', // Gold
+    '#3fb950', // Green
+    '#f85149', // Red
+    '#58a6ff'  // Blue
+];
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    populateSelectors();
+    initChart();
+    updateChart();
+});
+
+function populateSelectors() {
+    const selects = [
+        document.getElementById('product1'),
+        document.getElementById('product2'),
+        document.getElementById('product3'),
+        document.getElementById('product4')
+    ];
+
+    products.forEach(product => {
+        selects.forEach(select => {
+            const option = document.createElement('option');
+            option.value = product;
+            option.textContent = product;
+            select.appendChild(option);
+        });
+    });
+}
+
+function switchMode(mode) {
+    currentMode = mode;
+
+    // Update button states
+    document.querySelectorAll('.mode-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    if (mode === 'anc') {
+        document.getElementById('ancBtn').classList.add('active');
+    } else {
+        document.getElementById('transBtn').classList.add('active');
+    }
+
+    updateChart();
+}
+
+function initChart() {
+    const ctx = document.getElementById('ancChart').getContext('2d');
+
+    chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            datasets: []
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+                mode: 'index',
+                intersect: false,
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top',
+                    labels: {
+                        color: '#e6edf3',
+                        font: {
+                            family: "'Space Grotesk', sans-serif",
+                            size: 12
+                        }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#1a1f28',
+                    titleColor: '#d4af37',
+                    bodyColor: '#e6edf3',
+                    borderColor: '#d4af37',
+                    borderWidth: 1
+                }
+            },
+            scales: {
+                x: {
+                    type: 'logarithmic',
+                    min: 20,
+                    max: 20000,
+                    title: {
+                        display: true,
+                        text: 'Frequency (Hz)',
+                        color: '#d4af37',
+                        font: {
+                            family: "'Space Grotesk', sans-serif",
+                            size: 14,
+                            weight: 'bold'
+                        }
+                    },
+                    ticks: {
+                        color: '#e6edf3',
+                        callback: function(value) {
+                            const labels = [20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000];
+                            if (labels.includes(value)) {
+                                return value >= 1000 ? (value/1000) + 'k' : value;
+                            }
+                            return '';
+                        }
+                    },
+                    grid: {
+                        color: '#3a3f48'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'SPL (dB)',
+                        color: '#d4af37',
+                        font: {
+                            family: "'Space Grotesk', sans-serif",
+                            size: 14,
+                            weight: 'bold'
+                        }
+                    },
+                    ticks: {
+                        color: '#e6edf3'
+                    },
+                    grid: {
+                        color: '#3a3f48'
+                    }
+                }
+            }
+        }
+    });
+}
+
+function updateChart() {
+    const datasets = [];
+
+    // Always add ENV baseline
+    datasets.push({
+        label: 'ENV (Baseline)',
+        data: measurements.env,
+        borderColor: '#6e7681',
+        backgroundColor: 'transparent',
+        borderWidth: 2,
+        pointRadius: 0,
+        tension: 0.1
+    });
+
+    // Add selected products
+    const selects = ['product1', 'product2', 'product3', 'product4'];
+    let colorIndex = 0;
+
+    selects.forEach(selectId => {
+        const product = document.getElementById(selectId).value;
+        if (product) {
+            // Look for product with mode suffix
+            const key = product + ' ' + (currentMode === 'anc' ? 'ANC' : 'Transparency');
+            const data = measurements[currentMode][key];
+
+            if (data) {
+                datasets.push({
+                    label: product,
+                    data: data,
+                    borderColor: colors[colorIndex],
+                    backgroundColor: 'transparent',
+                    borderWidth: 3,
+                    pointRadius: 0,
+                    tension: 0.1
+                });
+                colorIndex++;
+            }
+        }
+    });
+
+    chart.data.datasets = datasets;
+    chart.update();
+}
+</script>
