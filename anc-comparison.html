@@ -146,7 +146,7 @@ permalink: /anc-comparison/
     <h1>ANC & Transparency Comparison</h1>
     <p class="anc-intro">
         Interactive comparison of active noise cancellation and transparency mode performance. 
-        Compare up to 4 products against the ENV baseline (pink noise reference).
+        Compare up to 4 products to see relative ANC effectiveness (lower SPL = better).
     </p>
 
     <div class="controls">
@@ -187,7 +187,7 @@ permalink: /anc-comparison/
 
     <div class="chart-wrapper">
         <canvas id="ancChart"></canvas>
-        <p class="legend-note">Positive dB = noise reduction from baseline. Higher is better for ANC. Negative values = sound passthrough (transparency mode).</p>
+        <p class="legend-note">Lower SPL = better noise cancellation. Values show sound pressure level measured at ear - compare relative performance between products.</p>
     </div>
 </div>
 
@@ -303,7 +303,7 @@ function initChart() {
                 y: {
                     title: {
                         display: true,
-                        text: 'Noise Reduction (dB)',
+                        text: 'SPL (dB)',
                         color: '#d4af37',
                         font: { family: "'Space Grotesk', sans-serif", size: 14, weight: 'bold' }
                     },
