@@ -187,7 +187,7 @@ permalink: /anc-comparison/
 
     <div class="chart-wrapper">
         <canvas id="ancChart"></canvas>
-        <p class="legend-note">ENV (gray) is the baseline pink noise reference. Lower dB = better noise cancellation.</p>
+        <p class="legend-note">Positive dB = noise reduction from baseline. Higher is better for ANC. Negative values = sound passthrough (transparency mode).</p>
     </div>
 </div>
 
@@ -303,7 +303,7 @@ function initChart() {
                 y: {
                     title: {
                         display: true,
-                        text: 'SPL (dB)',
+                        text: 'Noise Reduction (dB)',
                         color: '#d4af37',
                         font: { family: "'Space Grotesk', sans-serif", size: 14, weight: 'bold' }
                     },
@@ -326,13 +326,7 @@ function initChart() {
 }
 
 function updateChart() {
-    const datasets = [{
-        label: 'ENV (Baseline)',
-        data: measurements.env,
-        borderColor: '#6e7681',
-        backgroundColor: 'transparent',
-        borderWidth: 2
-    }];
+    const datasets = [];
     
     ['product1', 'product2', 'product3', 'product4'].forEach((id, i) => {
         const product = document.getElementById(id).value;
