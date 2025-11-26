@@ -33,18 +33,20 @@ layout: default
 }
 
 .review-meta-item {
-    color: var(--text-secondary);
+    color: var(--secondary-bg);
     font-size: 0.95rem;
 }
 
 .review-meta-item strong {
-    color: var(--accent-color);
+    color: var(--secondary-bg);
+    font-weight: 700;
 }
 
 .rating {
     font-size: 1.5rem;
-    color: var(--accent-color);
+    color: var(--secondary-bg);
     margin: 1rem 0;
+    font-weight: 700;
 }
 
 .affiliate-links {
@@ -149,12 +151,6 @@ layout: default
     font-weight: 600;
     color: var(--accent-color);
     width: 40%;
-}
-
-.pros-cons-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
 }
 
 .pros-box, .cons-box {
@@ -269,19 +265,15 @@ layout: default
     .review-header h1 {
         font-size: 1.8rem;
     }
-
+    
     .review-top-grid {
         grid-template-columns: 1fr;
     }
-
-    .pros-cons-grid {
-        grid-template-columns: 1fr;
-    }
-
+    
     .youtube-embed iframe {
         height: 250px;
     }
-
+    
     .affiliate-links {
         grid-template-columns: 1fr;
     }
@@ -291,12 +283,12 @@ layout: default
 <article class="review-page">
     <header class="review-header">
         <h1>{{ page.brand }} {{ page.model }}</h1>
-
+        
         <div class="review-meta">
             <span class="review-meta-item"><strong>Price:</strong> {{ page.price }}</span>
             <span class="review-meta-item"><strong>Date:</strong> {{ page.date | date: "%B %d, %Y" }}</span>
         </div>
-
+        
         <div class="rating">
             {% assign rating = page.rating %}
             {% for i in (1..5) %}
@@ -312,13 +304,13 @@ layout: default
                 🇬🇧 Buy on Amazon UK
             </a>
             {% endif %}
-
+            
             {% if page.affiliate_link_us %}
             <a href="{{ page.affiliate_link_us }}" class="affiliate-link affiliate-link-us" target="_blank" rel="noopener">
                 🇺🇸 Buy on Amazon US
             </a>
             {% endif %}
-
+            
             {% if page.affiliate_link_aliexpress %}
             <a href="{{ page.affiliate_link_aliexpress }}" class="affiliate-link affiliate-link-aliexpress" target="_blank" rel="noopener">
                 🌍 Buy on AliExpress
@@ -329,46 +321,46 @@ layout: default
 
     {% if page.youtube_id %}
     <div class="youtube-embed">
-        <iframe
-            src="https://www.youtube.com/embed/{{ page.youtube_id }}"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        <iframe 
+            src="https://www.youtube.com/embed/{{ page.youtube_id }}" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
         </iframe>
     </div>
     {% endif %}
 
     <div class="review-top-grid">
-            <div class="specs-section">
-                <h3>Specifications</h3>
-                <table class="specs-table">
-                    {% for spec in page.specs %}
-                    <tr>
-                        <td>{{ spec[0] }}</td>
-                        <td>{{ spec[1] }}</td>
-                    </tr>
-                    {% endfor %}
-                </table>
-            </div>
-
-            <div class="pros-box">
-                <h3>Pros</h3>
-                <ul>
-                    {% for pro in page.pros %}
-                    <li>{{ pro }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-
-            <div class="cons-box">
-                <h3>Cons</h3>
-                <ul>
-                    {% for con in page.cons %}
-                    <li>{{ con }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
+        <div class="specs-section">
+            <h3>Specifications</h3>
+            <table class="specs-table">
+                {% for spec in page.specs %}
+                <tr>
+                    <td>{{ spec[0] }}</td>
+                    <td>{{ spec[1] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
+
+        <div class="pros-box">
+            <h3>Pros</h3>
+            <ul>
+                {% for pro in page.pros %}
+                <li>{{ pro }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="cons-box">
+            <h3>Cons</h3>
+            <ul>
+                {% for con in page.cons %}
+                <li>{{ con }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 
     <div class="verdict-box">
         <h3>Verdict</h3>
@@ -386,13 +378,13 @@ layout: default
             🇬🇧 Buy on Amazon UK
         </a>
         {% endif %}
-
+        
         {% if page.affiliate_link_us %}
         <a href="{{ page.affiliate_link_us }}" class="affiliate-link affiliate-link-us" target="_blank" rel="noopener">
             🇺🇸 Buy on Amazon US
         </a>
         {% endif %}
-
+        
         {% if page.affiliate_link_aliexpress %}
         <a href="{{ page.affiliate_link_aliexpress }}" class="affiliate-link affiliate-link-aliexpress" target="_blank" rel="noopener">
             🌍 Buy on AliExpress
