@@ -104,9 +104,25 @@ Touch controls on the Ace Mimi work OK, but can at times be a source of frustrat
 
 ## ANC & Transparency
 
-The active noise cancellation is somewhat disappointing, actually performing slightly worse than the Ace 2 and falling behind similarly priced competitors. The binaural testing revealed relatively weak performance, particularly with mid-range frequencies and voices, with an average noise reduction of around 21dB, compared to 28dB on the Huawei FreeBuds Pro 4. Lower-frequency sounds are handled OK for the most part, but for Creative to neglect to make improvements here when practically every review on the Ace 2 criticized its ANC calls into question why Creative even bothered to release this model, especially with the FCC approvals in progress for the Ace 3.
+<div style="text-align: center; margin: 2rem 0;">
+    <img src="/assets/images/reviews/creative-mimi/cam anc.png" alt="ANC" style="max-width: 100%; border-radius: 12px;">
+</div>
 
-On the positive side, transparency mode is cleaner than the previous model with minimal occlusion effect when speaking. Environmental sounds come through clearly, making conversations easy to follow without removing the earbuds. It's again behind the likes of Huawei and OnePlus, but it's a clear improvement over the Ace 2.
+The active noise cancellation is somewhat disappointing, actually performing slightly worse than the Ace 2 and falling behind similarly priced competitors. It focuses its efforts where most ambient annoyance lives - the low-frequency drone of buses, trains, air conditioning units, and aircraft cabin noise. With 10-15dB of reduction through the bass frequencies and up to 15-20dB through the midrange, it takes a meaningful bite out of constant background rumble. On a commute, you'll notice the tube or bus engine recede noticeably into the background, and open-plan office chatter will be dampened enough to improve focus, though not eliminated entirely.
+
+<div style="text-align: center; margin: 2rem 0;">
+    <img src="/assets/images/reviews/creative-mimi/cam vs opb4 anc.png" alt="ANC vs OnePlus" style="max-width: 100%; border-radius: 12px;">
+</div>
+
+Higher-frequency sounds - keyboard clatter, nearby conversations, the ping of notification sounds - will still cut through, as the cancellation tapers off above 5kHz. This, whilst par for the course at this price bracket, is where the Mimi and Creative buds in general could do better; don't expect the near-silence of premium over-ears or even close to better peforrming in-ear TWS. Above shows the Mimi struggling against the OnePlus Buds 4 from 100Hz all the way up to 5kHz - which is basically where all of the noises that we encounter on a day to day basis reside.
+
+Measurements show the Mimi and Ace 2 performing very similarly on paper, though in real-world use I found the Ace 2 actually marginally more effective - likely down to subtle differences in fit or driver tuning that don't fully translate to controlled pink noise testing. Either way, both deliver satisfactory noise reduction that will likely leave you wanting a tad. For Creative to neglect to make improvements here when practically every review on the Ace 2 criticized its ANC calls into question why Creative even bothered to release this model, especially with the FCC approvals in progress for the Ace 3.
+
+<div style="text-align: center; margin: 2rem 0;">
+    <img src="/assets/images/reviews/creative-mimi/cam tr.png" alt="Transparency" style="max-width: 100%; border-radius: 12px;">
+</div>
+
+On the positive side, transparency mode is cleaner than the previous model with minimal occlusion effect when speaking. Through the bass and midrange - the frequencies that carry the weight of speech and most environmental sounds - the algorithm does a reasonable job of letting the outside world in, staying within a few decibels of natural hearing. You'll be able to hold conversations and hear traffic approaching without removing the earbuds, which is the primary goal. However, treble reproduction falls away noticeably above 5kHz, with attenuation reaching 10-15dB by 10kHz. In practice, this manifests as a slightly muffled quality to ambient sound - voices remain intelligible but lose some crispness, and sharper sounds like bicycle bells, birdsong, or the higher harmonics of car horns will sound softened and less immediate. It's perfectly usable for a quick chat or staying aware on a busy street, but it won't fool you into thinking you're not wearing earbuds. Performance here is subjectively marginally better than the Ace 2, although both are adequate and very usable.
 
 ## Audio & Sound Signature
 
@@ -116,7 +132,7 @@ The dual driver configuration pairs an XMEMS solid-state driver handling mids an
 
 ![vs Aurvana Ace 2](/assets/images/reviews/creative-mimi/vs_aurvana_ace_2.png)
 
-The bass response, while slightly improved over the Ace 2 with reduced mid-bass bloat, still lacks the punch and definition to match the precision of the mids and highs. Bass notes tend to linger a bit longer than ideal, creating a slight disconnect between the tight, articulate upper frequencies and the softer, less defined low end. It sounds like Creative simply adjusted the variables to improve the tuning, rather than use a different dynamic driver, so whilst the end result is slightly-more cohesive than the Ace 2, it still isn't ideal.
+The bass response, while slightly improved over the Ace 2 with reduced mid-bass bloat, still lacks the punch and definition to match the precision of the mids and highs. Bass notes tend to linger a bit longer than ideal, creating a slight disconnect between the tight, articulate upper frequencies and the softer, less defined low end. It sounds like Creative simply adjusted the variables to improve the tuning, rather than use a different dynamic driver, so whilst the end result is slightly-more cohesive than the Ace 2, it still isn't ideal. Still - both the Ace 2 and the Mimi exibit warmth and depth that make them a comfy listen.
 
 In the sub-£150 category, though, the Mimi still rank well in my audio league table, thanks to a sensible tuning and outstanding level of customisation, both hearing and preference-based, but it's still slightly disappointing that the improvement over the Ace 2 is incremental rather than transformative. A different dynamic driver implementation could have elevated the overall performance further, so they've left us longing for more here really, which is a shame.
 
