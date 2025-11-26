@@ -11,7 +11,9 @@ verdict: "Sounds great after EQ, but at the cost of a little practicality"
 image: /assets/images/reviews/soundpeats-h3/hero.jpg
 measurement_url: "https://regancipher.squig.link/?share=SoundPEATS_H3"
 youtube_id: "0Mr1UBuMqeE"
-affiliate_link: "https://amzn.to/48guCXW"
+affiliate_link_uk: "https://amzn.to/48guCXW"
+affiliate_link_us: "https://amzn.to/3XE4KPj"
+affiliate_link_aliexpress: "https://s.click.aliexpress.com/e/_c43fDtEp"
 
 category: iems
 tags:

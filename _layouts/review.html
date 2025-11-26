@@ -3,18 +3,17 @@ layout: default
 ---
 
 <style>
-/* Review page container */
 .review-page {
     max-width: 900px;
     margin: 0 auto;
-    padding: 3rem 2rem;
-    color: var(--secondary-bg);
+    padding: 2rem 1rem;
 }
 
-/* Review header */
 .review-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .review-header h1 {
@@ -22,75 +21,104 @@ layout: default
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--secondary-bg);
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    margin-bottom: 0.5rem;
 }
 
-.review-meta-top {
+.review-meta {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
+    margin: 1rem 0;
     flex-wrap: wrap;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
 }
 
-.review-meta-top .brand {
-    color: var(--primary-bg);
-    font-weight: 700;
+.review-meta-item {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
 }
 
-.review-meta-top .rating {
-    color: var(--primary-bg);
-    font-weight: 700;
-}
-
-.review-meta-top .price {
-    font-weight: 600;
-}
-
-/* Affiliate link */
-.affiliate-link {
-    display: inline-block;
-    background: var(--primary-bg);
+.review-meta-item strong {
     color: var(--accent-color);
-    padding: 1rem 2rem;
-    border-radius: 12px;
+}
+
+.rating {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin: 1rem 0;
+}
+
+.affiliate-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.affiliate-link {
+    display: block;
+    padding: 1rem;
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
     font-weight: 700;
     font-family: var(--font-display);
-    margin-bottom: 2rem;
     transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
 }
 
 .affiliate-link:hover {
-    background: var(--secondary-bg);
+    background: var(--primary-bg);
+    color: var(--accent-color);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* YouTube embed */
-.review-video {
+.affiliate-link-uk {
+    background: var(--accent-color);
+}
+
+.affiliate-link-us {
+    background: #3fb950;
+    border-color: #3fb950;
+}
+
+.affiliate-link-us:hover {
+    background: var(--primary-bg);
+    color: #3fb950;
+    border-color: #3fb950;
+}
+
+.affiliate-link-aliexpress {
+    background: #f85149;
+    border-color: #f85149;
+}
+
+.affiliate-link-aliexpress:hover {
+    background: var(--primary-bg);
+    color: #f85149;
+    border-color: #f85149;
+}
+
+.youtube-embed {
     margin: 2rem 0;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
-.review-video iframe {
+.youtube-embed iframe {
     width: 100%;
-    aspect-ratio: 16/9;
-    border: none;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 12px;
 }
 
-/* Specs and Pros/Cons grid */
 .review-top-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
-/* Specs table */
 .specs-section {
     background: var(--secondary-bg);
     padding: 1.5rem;
@@ -98,38 +126,34 @@ layout: default
 }
 
 .specs-section h3 {
-    font-family: var(--font-display);
     color: var(--accent-color);
+    font-family: var(--font-display);
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 }
 
-.specs-section table {
+.specs-table {
     width: 100%;
-    color: var(--text-primary);
-    font-size: 0.95rem;
 }
 
-.specs-section td {
-    padding: 0.5rem 0;
+.specs-table tr {
     border-bottom: 1px solid var(--border-color);
-    vertical-align: top;
 }
 
-.specs-section td:first-child {
+.specs-table td {
+    padding: 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.specs-table td:first-child {
     font-weight: 600;
-    color: var(--text-secondary);
+    color: var(--accent-color);
     width: 40%;
 }
 
-.specs-section tr:last-child td {
-    border-bottom: none;
-}
-
-/* Pros and Cons */
-.pros-cons-section {
-    display: flex;
-    flex-direction: column;
+.pros-cons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
 
@@ -140,231 +164,184 @@ layout: default
 }
 
 .pros-box h3 {
-    font-family: var(--font-display);
     color: #3fb950;
+    font-family: var(--font-display);
     margin-bottom: 1rem;
-    font-size: 1.25rem;
 }
 
 .cons-box h3 {
-    font-family: var(--font-display);
     color: #f85149;
+    font-family: var(--font-display);
     margin-bottom: 1rem;
-    font-size: 1.25rem;
 }
 
 .pros-box ul, .cons-box ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-}
-
-.pros-box li, .cons-box li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-    color: var(--text-primary);
-    line-height: 1.6;
 }
 
 .pros-box li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
+    content: "✓ ";
     color: #3fb950;
     font-weight: bold;
+    margin-right: 0.5rem;
 }
 
 .cons-box li::before {
-    content: "✗";
-    position: absolute;
-    left: 0;
+    content: "✗ ";
     color: #f85149;
     font-weight: bold;
+    margin-right: 0.5rem;
 }
 
-/* Review content */
+.pros-box li, .cons-box li {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.verdict-box {
+    background: var(--secondary-bg);
+    border: 3px solid var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.verdict-box h3 {
+    color: var(--accent-color);
+    font-family: var(--font-display);
+    margin-bottom: 0.5rem;
+}
+
+.verdict-box p {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
 .review-content {
+    color: var(--secondary-bg);
     line-height: 1.8;
     font-size: 1.05rem;
 }
 
 .review-content h2 {
     font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 700;
     color: var(--secondary-bg);
     margin-top: 3rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
 }
 
 .review-content h3 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--secondary-bg);
+    color: var(--accent-color);
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
 }
 
 .review-content p {
     margin-bottom: 1.5rem;
-    color: var(--secondary-bg);
 }
 
 .review-content img {
     max-width: 100%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    margin: 2rem auto;
     display: block;
+    margin: 2rem auto;
+    border-radius: 12px;
 }
 
-.review-content a {
-    color: var(--primary-bg);
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-.review-content a:hover {
-    color: var(--secondary-bg);
-}
-
-.review-content table {
-    width: 100%;
-    margin: 2rem 0;
-    background: var(--secondary-bg);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.review-content table td,
-.review-content table th {
-    padding: 0.75rem;
-    color: var(--text-primary);
-}
-
-.review-content table th {
-    background: var(--tertiary-bg);
-    font-weight: 600;
-    text-align: left;
-}
-
-.review-content table tr:not(:last-child) td {
-    border-bottom: 1px solid var(--border-color);
-}
-
-.review-content ul, .review-content ol {
-    margin-bottom: 1.5rem;
-    margin-left: 2rem;
-    color: var(--secondary-bg);
-}
-
-.review-content li {
-    margin-bottom: 0.5rem;
-}
-
-.review-content hr {
-    border: none;
-    border-top: 2px solid rgba(26, 31, 40, 0.2);
-    margin: 3rem 0;
-}
-
-.review-content strong {
-    color: var(--secondary-bg);
-}
-
-/* Disclosure box */
 .disclosure {
     background: var(--secondary-bg);
+    border: 2px solid var(--accent-color);
     padding: 1.5rem;
-    border-radius: 12px;
-    margin-top: 3rem;
-    border-left: 4px solid var(--accent-color);
-}
-
-.disclosure p {
+    border-radius: 8px;
+    margin: 3rem 0 2rem 0;
     color: var(--text-primary);
     font-size: 0.95rem;
-    line-height: 1.6;
-    margin: 0;
 }
 
-.disclosure a {
-    color: var(--accent-color);
-    text-decoration: underline;
-}
-
-.disclosure a:hover {
-    color: var(--accent-hover);
-}
-
-/* Mobile responsive */
 @media (max-width: 768px) {
-    .review-page {
-        padding: 2rem 1rem;
-    }
-
     .review-header h1 {
-        font-size: 1.75rem;
+        font-size: 1.8rem;
     }
-
+    
     .review-top-grid {
         grid-template-columns: 1fr;
     }
-
-    .review-content h2 {
-        font-size: 1.5rem;
+    
+    .pros-cons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .youtube-embed iframe {
+        height: 250px;
+    }
+    
+    .affiliate-links {
+        grid-template-columns: 1fr;
     }
 }
 </style>
 
 <article class="review-page">
-    <!-- Header -->
     <header class="review-header">
-        <h1>{{ page.title }}</h1>
-
-        <div class="review-meta-top">
-            <span class="brand">{{ page.brand }}</span>
-            <span>•</span>
-            {% if page.rating %}
-            <span class="rating">{{ page.rating }}/5 ⭐</span>
-            <span>•</span>
-            {% endif %}
-            <span class="price">{{ page.price }}</span>
-            <span>•</span>
-            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        <h1>{{ page.brand }} {{ page.model }}</h1>
+        
+        <div class="review-meta">
+            <span class="review-meta-item"><strong>Price:</strong> {{ page.price }}</span>
+            <span class="review-meta-item"><strong>Date:</strong> {{ page.date | date: "%B %d, %Y" }}</span>
+        </div>
+        
+        <div class="rating">
+            {% assign rating = page.rating %}
+            {% for i in (1..5) %}
+                {% if i <= rating %}★{% else %}☆{% endif %}
+            {% endfor %}
+            {{ page.rating }}/5
         </div>
 
-        {% if page.affiliate_link %}
-        <a href="{{ page.affiliate_link }}" target="_blank" rel="noopener" class="affiliate-link">
-            🛒 Buy Here! (Affiliate Link)
-        </a>
-        {% endif %}
+        <!-- Affiliate Links at Top -->
+        <div class="affiliate-links">
+            {% if page.affiliate_link_uk %}
+            <a href="{{ page.affiliate_link_uk }}" class="affiliate-link affiliate-link-uk" target="_blank" rel="noopener">
+                🇬🇧 Buy on Amazon UK
+            </a>
+            {% endif %}
+            
+            {% if page.affiliate_link_us %}
+            <a href="{{ page.affiliate_link_us }}" class="affiliate-link affiliate-link-us" target="_blank" rel="noopener">
+                🇺🇸 Buy on Amazon US
+            </a>
+            {% endif %}
+            
+            {% if page.affiliate_link_aliexpress %}
+            <a href="{{ page.affiliate_link_aliexpress }}" class="affiliate-link affiliate-link-aliexpress" target="_blank" rel="noopener">
+                🌍 Buy on AliExpress
+            </a>
+            {% endif %}
+        </div>
     </header>
 
-    <!-- YouTube Video -->
     {% if page.youtube_id %}
-    <div class="review-video">
-        <iframe
-            src="https://www.youtube.com/embed/{{ page.youtube_id }}"
-            title="{{ page.title }}"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    <div class="youtube-embed">
+        <iframe 
+            src="https://www.youtube.com/embed/{{ page.youtube_id }}" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
         </iframe>
     </div>
     {% endif %}
 
-    <!-- Specs and Pros/Cons -->
     <div class="review-top-grid">
-        <!-- Specs -->
         <div class="specs-section">
             <h3>Specifications</h3>
-            {% if page.specs %}
-            <table>
+            <table class="specs-table">
                 {% for spec in page.specs %}
                 <tr>
                     <td>{{ spec[0] }}</td>
@@ -372,12 +349,9 @@ layout: default
                 </tr>
                 {% endfor %}
             </table>
-            {% endif %}
         </div>
 
-        <!-- Pros & Cons -->
-        <div class="pros-cons-section">
-            {% if page.pros %}
+        <div class="pros-cons-grid">
             <div class="pros-box">
                 <h3>Pros</h3>
                 <ul>
@@ -386,9 +360,7 @@ layout: default
                     {% endfor %}
                 </ul>
             </div>
-            {% endif %}
 
-            {% if page.cons %}
             <div class="cons-box">
                 <h3>Cons</h3>
                 <ul>
@@ -397,25 +369,40 @@ layout: default
                     {% endfor %}
                 </ul>
             </div>
-            {% endif %}
         </div>
     </div>
 
-    <!-- Verdict -->
-    {% if page.verdict %}
-    <div style="background: var(--secondary-bg); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--accent-color); margin: 2rem 0;">
-        <strong style="color: var(--accent-color);">Verdict:</strong>
-        <span style="color: var(--text-primary);">{{ page.verdict }}</span>
+    <div class="verdict-box">
+        <h3>Verdict</h3>
+        <p>{{ page.verdict }}</p>
     </div>
-    {% endif %}
 
-    <!-- Review Content -->
     <div class="review-content">
         {{ content }}
     </div>
 
-    <!-- Disclosure -->
+    <!-- Affiliate Links at Bottom -->
+    <div class="affiliate-links">
+        {% if page.affiliate_link_uk %}
+        <a href="{{ page.affiliate_link_uk }}" class="affiliate-link affiliate-link-uk" target="_blank" rel="noopener">
+            🇬🇧 Buy on Amazon UK
+        </a>
+        {% endif %}
+        
+        {% if page.affiliate_link_us %}
+        <a href="{{ page.affiliate_link_us }}" class="affiliate-link affiliate-link-us" target="_blank" rel="noopener">
+            🇺🇸 Buy on Amazon US
+        </a>
+        {% endif %}
+        
+        {% if page.affiliate_link_aliexpress %}
+        <a href="{{ page.affiliate_link_aliexpress }}" class="affiliate-link affiliate-link-aliexpress" target="_blank" rel="noopener">
+            🌍 Buy on AliExpress
+        </a>
+        {% endif %}
+    </div>
+
     <div class="disclosure">
-        <p><strong>Disclosure:</strong> I received these buds from the manufacturer for free, but do not receive payment for any review, and the brands sending me earbuds have no creative input into the content (otherwise I won't work with them). My full disclaimer is in the <a href="/about/">About</a> section.</p>
+        <strong>Disclosure:</strong> I may receive these products from manufacturers for free, but I do not receive payment for reviews, and brands have no creative input into the content. My full disclaimer is in the About section.
     </div>
 </article>

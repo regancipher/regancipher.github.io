@@ -11,7 +11,9 @@ verdict: "Small steps forward for the xMEMS trailblazers"
 image: /assets/images/reviews/creative-mimi/hero.jpg
 measurement_url: "https://regancipher.squig.link/?share=Creative_Aurvana_Ace_Mimi"
 youtube_id: "nhB9POgtYZ0"
-affiliate_link: "https://amzn.to/43t35iN"
+affiliate_link_uk: "https://amzn.to/4rslSoM"
+affiliate_link_us: "https://amzn.to/4p9UytY"
+affiliate_link_aliexpress: "https://s.click.aliexpress.com/e/_c4M1poNL"
 
 category: iems
 tags:
