@@ -192,9 +192,3 @@ The SoundPEATS H3 is something of a gem, albeit not an especially versatile one.
 But for those seeking a set of all-rounders, this technical strength comes wrapped in compromises. I can accept a bit of EQ intervention since sound is largely subjective, and a good driver selection and combo will encourage EQ tweaking rather than see it as detrimental. The short battery-life, though, will put people off, given so many people these days can't seem to tolerate ten minutes of real life without their music, and I may be alone in thinking this but the cheap-feeling case is so bad it's almost enough to actually put me off taking them out.
 
 SoundPEATS, IMO, have struck a nice balance between high quality audio and doing the basics. The shortfalls inevitably mean this isn't a shoe-in purchase, but I like them enough to keep them on rotation - high praise indeed!
-
-## Affiliate Purchase Links
-
-US - https://amzn.to/48hbM18
-UK - https://amzn.to/4rCibwS
-WW - https://s.click.aliexpress.com/e/_c43fDtEp
