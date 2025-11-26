@@ -27,26 +27,35 @@ layout: default
 .review-meta {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    gap: 1rem;
     margin: 1rem 0;
     flex-wrap: wrap;
+    font-size: 0.95rem;
 }
 
 .review-meta-item {
     color: var(--secondary-bg);
-    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
-.review-meta-item strong {
+.review-meta-item::after {
+    content: "•";
+    margin-left: 1rem;
     color: var(--secondary-bg);
-    font-weight: 700;
+}
+
+.review-meta-item:last-child::after {
+    content: "";
+    margin-left: 0;
 }
 
 .rating {
-    font-size: 1.5rem;
     color: var(--secondary-bg);
-    margin: 1rem 0;
     font-weight: 700;
+    font-size: 0.95rem;
 }
 
 .affiliate-links {
@@ -77,7 +86,15 @@ layout: default
 }
 
 .affiliate-link-uk {
-    background: var(--accent-color);
+    background: var(--secondary-bg);
+    border-color: var(--secondary-bg);
+    color: var(--primary-bg);
+}
+
+.affiliate-link-uk:hover {
+    background: var(--primary-bg);
+    color: var(--secondary-bg);
+    border-color: var(--secondary-bg);
 }
 
 .affiliate-link-us {
@@ -116,7 +133,7 @@ layout: default
 
 .review-top-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     margin: 2rem 0;
 }
@@ -125,6 +142,13 @@ layout: default
     background: var(--secondary-bg);
     padding: 1.5rem;
     border-radius: 12px;
+    grid-row: span 2;
+}
+
+.pros-cons-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .specs-section h3 {
@@ -229,6 +253,7 @@ layout: default
     margin-top: 3rem;
     margin-bottom: 1rem;
     font-size: 1.8rem;
+    text-transform: capitalize;
 }
 
 .review-content h3 {
@@ -237,6 +262,7 @@ layout: default
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     font-size: 1.3rem;
+    text-transform: capitalize;
 }
 
 .review-content p {
@@ -285,16 +311,16 @@ layout: default
         <h1>{{ page.brand }} {{ page.model }}</h1>
         
         <div class="review-meta">
-            <span class="review-meta-item"><strong>Price:</strong> {{ page.price }}</span>
-            <span class="review-meta-item"><strong>Date:</strong> {{ page.date | date: "%B %d, %Y" }}</span>
-        </div>
-        
-        <div class="rating">
-            {% assign rating = page.rating %}
-            {% for i in (1..5) %}
-                {% if i <= rating %}★{% else %}☆{% endif %}
-            {% endfor %}
-            {{ page.rating }}/5
+            <span class="review-meta-item">{{ page.brand }}</span>
+            <span class="rating">
+                {% assign rating = page.rating %}
+                {% for i in (1..5) %}
+                    {% if i <= rating %}★{% else %}☆{% endif %}
+                {% endfor %}
+                {{ page.rating }}/5
+            </span>
+            <span class="review-meta-item">{{ page.price }}</span>
+            <span class="review-meta-item">{{ page.date | date: "%B %d, %Y" }}</span>
         </div>
 
         <!-- Affiliate Links at Top -->
@@ -343,22 +369,24 @@ layout: default
             </table>
         </div>
 
-        <div class="pros-box">
-            <h3>Pros</h3>
-            <ul>
-                {% for pro in page.pros %}
-                <li>{{ pro }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+        <div class="pros-cons-column">
+            <div class="pros-box">
+                <h3>Pros</h3>
+                <ul>
+                    {% for pro in page.pros %}
+                    <li>{{ pro }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
 
-        <div class="cons-box">
-            <h3>Cons</h3>
-            <ul>
-                {% for con in page.cons %}
-                <li>{{ con }}</li>
-                {% endfor %}
-            </ul>
+            <div class="cons-box">
+                <h3>Cons</h3>
+                <ul>
+                    {% for con in page.cons %}
+                    <li>{{ con }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
 
