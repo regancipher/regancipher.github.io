@@ -198,15 +198,15 @@ permalink: /anc-comparison/
     .anc-page h1 {
         font-size: 2rem;
     }
-    
+
     .product-selectors {
         grid-template-columns: 1fr;
     }
-    
+
     #ancChart {
         height: 350px !important;
     }
-    
+
     .frequency-list {
         grid-template-columns: 1fr;
     }
@@ -216,8 +216,8 @@ permalink: /anc-comparison/
 <div class="anc-page">
     <h1>ANC & Transparency Comparison</h1>
     <p class="anc-intro">
-        Interactive comparison of active noise cancellation and transparency mode performance. 
-        Compare up to 4 products to see relative ANC effectiveness (lower SPL = better).
+        Interactive comparison of active noise cancellation and transparency mode performance.
+        Compare up to 4 products to see relative ANC & Transparency effectiveness. See below for explanations on how to interpret the graphs.
     </p>
 
     <div class="controls">
@@ -263,7 +263,7 @@ permalink: /anc-comparison/
 
     <div class="frequency-guide">
         <h2>📊 What Am I Looking At?</h2>
-        
+
         <div class="guide-section">
             <h3>🔊 Understanding the Frequencies:</h3>
             <ul class="frequency-list">
@@ -304,7 +304,7 @@ permalink: /anc-comparison/
                 <p><strong>For ANC Mode:</strong><br>
                 Lower SPL (Sound Pressure Level) = Better noise cancellation<br>
                 The further below the baseline the line drops, the more noise is being blocked at that frequency.</p>
-                
+
                 <p><strong>For Transparency Mode:</strong><br>
                 Higher SPL = More sound passthrough<br>
                 Lines closer to the baseline mean you can hear your environment more naturally.<br>
@@ -379,7 +379,7 @@ function switchMode(mode) {
     currentMode = mode;
     document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
     document.getElementById(mode === 'anc' ? 'ancBtn' : 'transBtn').classList.add('active');
-    
+
     // Update legend based on mode
     const legendNote = document.getElementById('legendNote');
     if (mode === 'anc') {
@@ -387,13 +387,13 @@ function switchMode(mode) {
     } else {
         legendNote.textContent = 'Higher SPL = more passthrough. Lines closer to baseline = more natural sound.';
     }
-    
+
     updateChart();
 }
 
 function initChart() {
     const ctx = document.getElementById('ancChart').getContext('2d');
-    
+
     chart = new Chart(ctx, {
         type: 'line',
         data: { datasets: [] },
@@ -464,7 +464,7 @@ function initChart() {
                         color: '#d4af37',
                         font: { family: "'Space Grotesk', sans-serif", size: 14, weight: 'bold' }
                     },
-                    ticks: { 
+                    ticks: {
                         display: false
                     },
                     grid: { color: '#3a3f48' }
@@ -492,7 +492,7 @@ function updateChart() {
         backgroundColor: 'transparent',
         borderWidth: 2
     }];
-    
+
     ['product1', 'product2', 'product3', 'product4'].forEach((id, i) => {
         const product = document.getElementById(id).value;
         if (product) {
@@ -509,7 +509,7 @@ function updateChart() {
             }
         }
     });
-    
+
     chart.data.datasets = datasets;
     chart.update('none');
 }
