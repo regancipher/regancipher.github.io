@@ -127,6 +127,73 @@ permalink: /anc-comparison/
     margin-top: 1rem;
 }
 
+.frequency-guide {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    color: var(--text-primary);
+}
+
+.frequency-guide h2 {
+    color: var(--accent-color);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.guide-section {
+    margin-bottom: 2rem;
+}
+
+.guide-section h3 {
+    color: var(--accent-color);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.frequency-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.frequency-list li {
+    padding: 0.75rem;
+    background: var(--tertiary-bg);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.frequency-list strong {
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.how-to-read {
+    background: var(--tertiary-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    line-height: 1.8;
+}
+
+.how-to-read p {
+    margin-bottom: 1rem;
+}
+
+.how-to-read p:last-child {
+    margin-bottom: 0;
+}
+
+.how-to-read strong {
+    color: var(--accent-color);
+}
+
 @media (max-width: 768px) {
     .anc-page h1 {
         font-size: 2rem;
@@ -138,6 +205,10 @@ permalink: /anc-comparison/
     
     #ancChart {
         height: 350px !important;
+    }
+    
+    .frequency-list {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -187,7 +258,60 @@ permalink: /anc-comparison/
 
     <div class="chart-wrapper">
         <canvas id="ancChart"></canvas>
-        <p class="legend-note">ENV (gray) shows pink noise baseline. Lower SPL = better ANC performance. Compare lines relative to baseline and each other.</p>
+        <p class="legend-note" id="legendNote">Lower SPL = better noise cancellation. Lines further below show stronger blocking.</p>
+    </div>
+
+    <div class="frequency-guide">
+        <h2>📊 What Am I Looking At?</h2>
+        
+        <div class="guide-section">
+            <h3>🔊 Understanding the Frequencies:</h3>
+            <ul class="frequency-list">
+                <li>
+                    <strong>Sub-Bass (20-60Hz)</strong>
+                    Deep rumble - subway trains, heavy trucks, airplane engines
+                </li>
+                <li>
+                    <strong>Bass (60-250Hz)</strong>
+                    Low hum - bus engines, traffic noise, air conditioning, washing machines
+                </li>
+                <li>
+                    <strong>Low-Mid (250-500Hz)</strong>
+                    Drone sounds - road noise, distant traffic, office HVAC systems
+                </li>
+                <li>
+                    <strong>Midrange (500-2kHz)</strong>
+                    Human voices - conversations, TV dialogue, phone calls, restaurant chatter
+                </li>
+                <li>
+                    <strong>Upper-Mid (2kHz-4kHz)</strong>
+                    Clarity range - keyboard typing, cutlery, footsteps, door closing
+                </li>
+                <li>
+                    <strong>Treble (4kHz-10kHz)</strong>
+                    High sounds - dishes clanking, paper rustling, sibilant speech (s/sh sounds)
+                </li>
+                <li>
+                    <strong>Air (10kHz+)</strong>
+                    Very high - electronic beeps, high-pitched squeaks, cymbal shimmer
+                </li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h3>💡 How to Read the Graph:</h3>
+            <div class="how-to-read">
+                <p><strong>For ANC Mode:</strong><br>
+                Lower SPL (Sound Pressure Level) = Better noise cancellation<br>
+                The further below the baseline the line drops, the more noise is being blocked at that frequency.</p>
+                
+                <p><strong>For Transparency Mode:</strong><br>
+                Higher SPL = More sound passthrough<br>
+                Lines closer to the baseline mean you can hear your environment more naturally.<br>
+                Lines above the baseline indicate amplification, which can create white noise or an unnatural sense of sound.<br>
+                The goal is natural sound reproduction - you want to hear voices and ambient noise as they actually sound.</p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -218,6 +342,21 @@ let chart = null;
 
 const colors = ['#d4af37', '#3fb950', '#f85149', '#58a6ff'];
 
+// Frequency hover tooltips
+const frequencyTooltips = {
+    20: 'Subway rumble, airplane cabin drone',
+    50: 'Heavy trucks, deep bass',
+    100: 'Bus engines, heavy traffic',
+    200: 'Road noise, HVAC systems',
+    500: 'Office noise, distant traffic',
+    1000: 'Human voices, conversations',
+    2000: 'Speech clarity, phone calls',
+    4000: 'Keyboard typing, dishes',
+    8000: 'Sibilance, high-pitched speech',
+    10000: 'Very high sounds, electronic beeps',
+    20000: 'Upper limit of hearing'
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     populateSelectors();
     initChart();
@@ -240,6 +379,15 @@ function switchMode(mode) {
     currentMode = mode;
     document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
     document.getElementById(mode === 'anc' ? 'ancBtn' : 'transBtn').classList.add('active');
+    
+    // Update legend based on mode
+    const legendNote = document.getElementById('legendNote');
+    if (mode === 'anc') {
+        legendNote.textContent = 'Lower SPL = better noise cancellation. Lines further below show stronger blocking.';
+    } else {
+        legendNote.textContent = 'Higher SPL = more passthrough. Lines closer to baseline = more natural sound.';
+    }
+    
     updateChart();
 }
 
@@ -277,7 +425,14 @@ function initChart() {
                     titleColor: '#d4af37',
                     bodyColor: '#e6edf3',
                     borderColor: '#d4af37',
-                    borderWidth: 1
+                    borderWidth: 1,
+                    callbacks: {
+                        title: function(context) {
+                            const freq = Math.round(context[0].parsed.x);
+                            const tooltip = frequencyTooltips[freq];
+                            return tooltip ? `${freq}Hz - ${tooltip}` : `${freq}Hz`;
+                        }
+                    }
                 }
             },
             scales: {
