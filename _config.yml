@@ -1,15 +1,22 @@
 # Site settings
-title: ReganCipher
-email: your-email@example.com
+title: "ReganCipher - Audio Gear Reviews & Measurements"
+email: info@regancipher.com
 description: >-
-  In-depth audio gear reviews with comprehensive measurements.
-  Headphones, IEMs, and DACs tested with ReganCipher precision.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://regancipher.github.io" # your site's URL
+  In-depth TWS, IEM, and headphone reviews with comprehensive measurements.
+  Objective testing for ANC, transparency, and audio quality - completely subscription-free.
+baseurl: ""
+url: "https://regancipher.com"
+
+# Author
+author:
+  name: "ReganCipher"
+  email: your-email@example.com
 
 # Build settings
 markdown: kramdown
 theme: minima
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -24,6 +31,39 @@ collections:
     output: true
     permalink: /news/:year/:month/:title/
 
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "review"
+      author: "ReganCipher"
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/thumbnail.png
+
+# Social links
+youtube_channel: "https://youtube.com/@regancipher"
+github_username: regancipher
+reddit_username: Radiant-Cherry-7973
+
+# SEO - Twitter/Social
+twitter:
+  username: regancipher
+  card: summary_large_image
+
+social:
+  name: ReganCipher
+  links:
+    - https://youtube.com/@regancipher
+    - https://reddit.com/u/Radiant-Cherry-7973
+    - https://bio.link/regancipher
+
+# Analytics (replace with your actual tracking ID)
+google_analytics: UA-XXXXXXXXX-X
+
 # Exclude files from processing
 exclude:
   - measurements/
@@ -35,23 +75,5 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - README.md
-
-# Default front matter
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "review"
-      author: "ReganCipher"
-
-# Social links
-youtube_channel: "https://youtube.com/@regancipher"
-github_username: regancipher
-
-# SEO
-Reddit:
-  username: Radiant-Cherry-7973
-
-# Analytics (add your tracking ID)
-google_analytics: UA-XXXXXXXXX-X
+  - archive/
+  - process-measurements*.py

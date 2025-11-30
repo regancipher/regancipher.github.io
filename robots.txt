@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://regancipher.com/sitemap.xml

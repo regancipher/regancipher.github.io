@@ -4,21 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
-    
+
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    
+
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    
+
     {% seo %}
     {% feed_meta %}
+
+    <!-- Open Graph additional tags -->
+    <meta property="og:site_name" content="ReganCipher">
+    <meta property="og:locale" content="en_GB">
+
+    {% if page.image %}
+    <meta property="og:image" content="{{ page.image | absolute_url }}">
+    <meta name="twitter:image" content="{{ page.image | absolute_url }}">
+    {% else %}
+    <meta property="og:image" content="{{ '/assets/images/thumbnail.png' | absolute_url }}">
+    <meta name="twitter:image" content="{{ '/assets/images/thumbnail.png' | absolute_url }}">
+    {% endif %}
+
+    <!-- Schema.org structured data for reviews -->
+    {% if page.layout == 'review' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Product",
+        "name": "{{ page.brand }} {{ page.model }}",
+        "image": "{{ page.image | absolute_url }}",
+        "brand": {
+          "@type": "Brand",
+          "name": "{{ page.brand }}"
+        }
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{{ page.rating }}",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "ReganCipher",
+        "url": "https://regancipher.com/about/"
+      },
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "reviewBody": "{{ page.excerpt | strip_html | escape }}"
+    }
+    </script>
+    {% endif %}
 </head>
 <body>
     {% include header.html %}
-    
+
     <main class="content">
         {{ content }}
     </main>
-    
+
     {% include footer.html %}
 </body>
 </html>
