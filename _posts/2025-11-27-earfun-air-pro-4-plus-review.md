@@ -5,7 +5,7 @@ date: 2025-11-27
 brand: "Earfun"
 model: "Air Pro 4 Plus"
 price: "$99.99 - currently £66.48 at Amazon UK"
-rating: 4.5
+rating: 4.0
 verdict: "Some improvements on its popular predecessor - but is it enough?"
 
 image: /assets/images/reviews/earfun-air-pro-4-plus/hero.jpg
