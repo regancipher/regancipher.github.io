@@ -3,8 +3,8 @@ layout: review
 title: "Earfun Air Pro 4+"
 date: 2025-11-27
 brand: "Earfun"
-model: "Air Pro 4 Plus"
-price: "$99.99 - currently £66.48 at Amazon UK"
+model: "Air Pro 4+"
+price: "£89.99 - currently £66.48 at Amazon UK"
 rating: 4.0
 verdict: "Some improvements on its popular predecessor - but is it enough?"
 
@@ -37,7 +37,7 @@ specs:
     Total Battery: "Up to 54 hours"
     Quick Charge: "10min = 3 hours"
     Wireless Charging: "Yes"
-    Wear Detection: "Yes (extensive control)"
+    Wear Detection: "Yes"
     Spatial Audio: "No"
     Other Notable Features: Auracast, Mute call
     In The Box: 5 sets of eartips, charge cable
@@ -45,26 +45,23 @@ specs:
 pros:
   - ANC improvement over Air Pro 4
   - Custom balanced armature enhances treble performance
-  - Harman-target tuning out of the box (ANC off)
+  - Harman-target tuning out of the box with ANC off
   - Good driver coherency for first hybrid implementation
-  - Improved comfort with oval nozzle design, alleviating occlusion (for me)
+  - Improved comfort with oval nozzle design
   - Comprehensive control customization (including mute call)
   - Device list for multipoint management
-  - Strong battery life (
-  - Improved transparency mode
+  - Strong battery life
   - IP55 dust and water resistance
-  - Redesigned case (improved orientation)
+  - Codecs galore
 
 cons:
-  - ANC still not as good as comparably-priced models
   - Notable EQ shift with ANC on (thicker, more muffled sound)
-  - Transparency mode slightly weaker than competitors
-  - Some users may experience ear pressure
-  - Gaming mode latency higher than competitors (113ms)
-  - Normal mode latency 234ms
-  - Call quality still not exceptional
+  - ANC still not as good as comparably-priced models
+  - Transparency mode improved but still slightly weaker than competitors
+  - Aggressive AI call noise reduction
+  - Latency, even with gaming mode, slightly higher than competitors
 
-excerpt: "Earfun's first hybrid-driver TWS improves on the original with more detail to the sound, a mute call function and a bud redesign geared up for more comfort. ANC, transparency and calls see only incremental upgrades - but this is still a solid sub-$100 contender that does all the basics well "
+excerpt: "Earfun's first hybrid-driver TWS improves on the original with more detail to the sound, a mute call function and a bud redesign geared up for more comfort. ANC, transparency and calls see only incremental upgrades - but this is still a solid sub-$100 contender that does all the basics well"
 ---
 
 **Review Reference:** RC186
