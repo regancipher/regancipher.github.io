@@ -1,6 +1,6 @@
 ---
 layout: review
-title: "Earfun Air Pro 4 Plus"
+title: "Earfun Air Pro 4+"
 date: 2025-11-27
 brand: "Earfun"
 model: "Air Pro 4 Plus"
@@ -64,11 +64,11 @@ cons:
   - Normal mode latency 234ms
   - Call quality still not exceptional
 
-excerpt: "Earfun's first hybrid earbud successfully delivers Harman-target tuning with commendable driver coherency, comprehensive features, and improved comfort - though the ANC-induced EQ shift remains problematic"
+excerpt: "Earfun's first hybrid-driver TWS improves on the original with more detail to the sound, a mute call function and a bud redesign geared up for more comfort. ANC, transparency and calls see only incremental upgrades - but this is still a solid sub-$100 contender that does all the basics well "
 ---
 
 **Review Reference:** RC186
-**Price at Review:** $99.99
+**Price at Review:** £89.99
 
 <div style="text-align: center; margin: 2rem 0;">
     <img src="/assets/images/reviews/earfun-air-pro-4-plus/1.jpg" alt="Earfun Air Pro 4 Plus" style="max-width: 100%; border-radius: 12px;">
@@ -76,13 +76,15 @@ excerpt: "Earfun's first hybrid earbud successfully delivers Harman-target tunin
 
 ## Introduction
 
-If you do a search on 'best TWS under $100' anywhere from the earbuds subreddit to LLMs to random Android Authority-style regurgitated articles, you'll probably stumble upon the Earfun Air Pro 4 - the predecessor to the 4+ - which deserved their acclaim, and achieved popularity despite an amusing brand name that will undoubtedly still put a few off, something I've learned to forgive them for over time :D If you watched my Air Pro 3 review, you'll note my tone on that model was quite dismissive - the sound was way overcooked in the bass, the distortion numbers were disappointing and the ANC fell behind many of its competitors.
+If you do a search on 'best TWS under $100' anywhere from the earbuds subreddit to LLMs to random Android Authority-style regurgitated pieces written by people who clearly know more about how to write effective sponsored articles than testing earbuds , you'll probably stumble upon the Earfun Air Pro 4 - the predecessor to the 4+ - which deserved their acclaim almost as the de facto budget alternative to the Apple Airpods Pro. That Earfun achieved such popularity despite a brand name that I've seen many turn their noses up at, is even more of a testament to the quality of product they brought to the market.
 
-Before the release of the Air Pro 4, Earfun got in contact with me and asked me why I didn't like them. To say I was surprised is an understatement as we'd had no prior contact (I bought the Air Pro 3 out of my own pocket, as is the case with many brands I review). To Earfun's credit, pretty much everything I fed back to them was upgraded in its subsequent release, and Earfun have maintained that relationship since. They are one of the brands I really enjoy dealing with, one of the few that take note of criticism, and by all accounts my experience with them isn't unique.  
+I was one of those impressed (with caveats) with the Air Pro 4, but my relationship with Earfun hasn't always been that way. If you watched my Air Pro 3 review, you'll note my tone on that model was quite dismissive - the sound was way overcooked in the bass, the distortion numbers were disappointing and the ANC fell behind many of its competitors. Transparency mode was stuffy, they sucked for calls, there were spelling mistakes on the box, and summarily I was convinced the positive reviews had to be paid!
 
-The Air Pro 4+ (4+, 4 Plus, however you wanna refer to it) is positioned alongside, slightly above the 4 - with the "Plus" designation following the industry trend of offering enhanced versions with additional drivers, promising improved audio quality whilst maintaining the value proposition that made the standard versions popular. At around $100, the Air Pro 4 Plus competes directly in the crowded sub-$100 segment where marginal improvements can make or break a product.
+Before the release of the Air Pro 4, Earfun got in contact with me and asked me why I didn't like them. To say I was surprised is an understatement, as we'd had no prior contact (I bought the Air Pro 3 out of my own pocket, as is the case with many brands I review). This professional exchange was commendable - there was no drama and no demand to change my review, and to Earfun's credit, pretty much everything I fed back to them was upgraded in its subsequent release. Earfun have maintained that relationship since, even sending beta products out for feedback before they decided which markets to launch them in. They are one of the brands I really enjoy dealing with, one of the few that take note of and act upon constructive criticism. By all accounts my experience with them isn't unique, with lots of positive feedback about their customer-focused approach.  
 
-The Air Pro 4 had its strengths - particularly its Harman-hugging tuning - but struggled with call quality (later improved through firmware updates) and had a smaller rounded nozzle that gave a deeper, sometimes uncomfortable fit with notable occlusion effects. The question is whether the Plus version addresses these shortcomings whilst successfully integrating a second driver - something Earfun had only done previously in headphone form with the Wave Pro, and not especially effectively - so it's good news that that part of the question was definitely answered, but as always, there's still some considerations that prevent this (and every other model in this segment) being a shoe-in.
+The Air Pro 4+ (4+, 4 Plus, however you wanna refer to it) is positioned alongside, slightly above the 4 - with the "Plus" designation following the industry trend of offering enhanced versions with additional drivers, promising improved audio quality whilst maintaining the value proposition that made the standard versions popular. At around $100, the Air Pro 4+ competes directly in the crowded sub-$100 segment, where marginal improvements can really make or break a product.
+
+The Air Pro 4 had its strengths - particularly its Harman-hugging tuning which sorted out the mess of the Air Pro 3 - but still struggled with call quality (later improved through firmware updates) and had a small rounded nozzle that gave a deeper, sometimes uncomfortable fit with notable occlusion effects particularly when using them in transparency mode. The AI algorithm handling call noise reduction was overly-aggressive, too, still leaving Earfun plenty of areas to remedy. The question of whether the Plus version addresses these shortcomings whilst successfully integrating a second driver - something Earfun had only done previously in headphone form with the Wave Pro (and not especially effectively) is more-or-less answered positively, but whether those improvements are enough to capture your purchase isn't quite a shoe-in - read on for my thoughts, and hopefully by the end, you'll be in a better position to judge for yourself.
 
 ## Design, Fit and Comfort
 
@@ -90,7 +92,7 @@ The Air Pro 4 had its strengths - particularly its Harman-hugging tuning - but s
     <img src="/assets/images/reviews/earfun-air-pro-4-plus/2.jpg" alt="Buds design vs original - outside" style="max-width: 100%; border-radius: 12px;">
 </div>
 
-It's business as usual when it comes to the aesthetics of the Air Pro 4+, with a familiar look of subtlety. These are medium-length stem-based buds that feature a ring at the top of the stem to designate the touch control area, and a little branding underneath. Evolution rather than revolution.
+It's business as usual when it comes to the aesthetics of the Air Pro 4+, with a familiar look of subtlety, only really tweaking the tone to a warmer, more business-like look. These are medium-length stem-based buds that feature a ring at the top of the stem to designate the touch control area, and a little branding underneath. Evolution rather than revolution. Touch control sensitivity is good, by the way, with minimal accidental touches.
 
 <div style="text-align: center; margin: 2rem 0;">
     <img src="/assets/images/reviews/earfun-air-pro-4-plus/3.jpg" alt="Buds design vs original - nozzles" style="max-width: 100%; border-radius: 12px;">
@@ -102,7 +104,9 @@ Whilst not looking a great deal different, Earfun have gone for a full-on redesi
     <img src="/assets/images/reviews/earfun-air-pro-4-plus/4.jpg" alt="Case design" style="max-width: 100%; border-radius: 12px;">
 </div>
 
-For me, not only was the new design more comfortable, but it alleviated the occlusion effect that was present on the Air Pro 4. The oval nozzle provides a shallower, more universal fit that should accommodate a wider range of ear shapes and sizes. Basically, they've followed the rest of the the industry, opting to go with Apple's lead rather than sticking with the IEM-style fit of their previous releases. And as always with subjective elements like these, your mileage may vary - everyone's ear shape, size and anatomy is slightly different, so what works for one may not work for others, but the fact Apple made that change often tells you all you need to know. Personally, I found them pretty comfortable - better, in a way, than the likes of OnePlus Buds 4, which are initially lightweight but would cause a little ache after a while, but not as comfortable as SoundPEATS' AirX Pro series. The eartips are made from a curious, sticky material that added stability during exercise testing, and whilst I could feel them at times in my ears, they were still a good gym companion overall, passing the 100 jumping jacks test without issue and offering an industry-standard IP55 rating provides adequate water and dust protection.
+For me, not only was the new design more comfortable, but it alleviated somewhat the occlusion effect that was overbearing on the Air Pro 4. The oval nozzle provides a shallower, more universal fit that should accommodate a wider range of ear shapes and sizes. Basically, they've followed the rest of the the industry, opting to go with Apple's lead rather than sticking with the IEM-style fit of their previous releases. And as always with subjective elements like these, your mileage may vary - everyone's ear shape, size and anatomy is slightly different, so what works for one may not work for others, but the fact Apple made that change often tells you all you need to know. Still, there's a hint of occlusion still there when talking with transparency mode on, something I suspect will depend on even more of a redesign in terms of venting to eradicate altogether on future iterations.
+
+Personally, I found the Air Pro 4+ comfortable - better, in a way, than the likes of OnePlus Buds 4, which are initially lightweight but would cause a little ache after a while, but not as comfortable as SoundPEATS' AirX Pro series. The eartips are made from a curious, sticky material that added stability during exercise testing, and whilst I could feel them at times in my ears, they were still a good gym companion overall, passing the 100 jumping jacks test without issue and offering an industry-standard IP55 rating provides adequate water and dust protection.
 
 My partner, on the other hand, has smaller ears and felt a little bit of ear pressure, notably with ANC on. I guess this comes back to your propensity for these things, and is one of the frustrations us reviewers have because everyone's experience when it comes to fit - something that makes or breaks your experience with them - differs somewhat. If I had to hedge my bets, I'd say these are better suited to adult males of a certain age than teenagers or females, but this is of course a sweeping generalisation so don't take that as gospel!
 
@@ -118,19 +122,19 @@ The case is another element that has enjoyed a redesign, with a new orientation 
     <img src="/assets/images/reviews/earfun-air-pro-4-plus/7.jpg" alt="Case design front" style="max-width: 100%; border-radius: 12px;">
 </div>
 
-The case LED and Earfun logo are prominent, although not garishly so.
+The case LED and Earfun logo are prominent, although not garishly so. It's a simplistic design that just works. After a fair amount of time in my pocket during testing, the plastic hasn't scratched up too much like it did on the Air 2 NC, but it isn't going to win any prizes at the 'TWS Battery Charging Case Beauty Pageant 2025' that's for sure. Still, for those of us who couldn't care less about such trivialities, it gets the job done.
 
 <div style="text-align: center; margin: 2rem 0;">
     <img src="/assets/images/reviews/earfun-air-pro-4-plus/6.jpg" alt="Case design comparison" style="max-width: 100%; border-radius: 12px;">
 </div>
 
-When it comes to portability, the case is pretty compact - a big improvement over the 4, and whilst it has stood the test of time in my pocket fairly well, it doesn't feel as robust as some competitors - Realme, for example, with their Air 7 Pro. It's still plastic and there's a bit of machine tolerance on the edges. Still, it does the job and will fit in your pocket and not weigh you down.
+When it comes to portability, the case is pretty compact - a big improvement over the 4, but it doesn't feel as robust as some competitors - Realme, for example, with their Air 7 Pro. It's still plastic and there's a bit of machine tolerance on the edges. Still, it will fit in your pocket and not weigh you down, meaning a tick in the box for 'improved case' is there over the original.
 
 <div style="text-align: center; margin: 2rem 0;">
     <img src="/assets/images/reviews/earfun-air-pro-4-plus/8.jpg" alt="Case battery" style="max-width: 100%; border-radius: 12px;">
 </div>
 
-The case supports wireless charging, adding convenience for those who prefer cable-free charging solutions. It also includes quick charge capability, giving you 3 hours of playtime from just 10 minutes plugged in - two features that are not always included, but are always welcome.
+The case supports wireless charging, adding a bit of convenience for those who like a clean desk. It also includes quick charge capability, giving you 3 hours of playtime from just 10 minutes plugged in - two features that are not always included, but are always welcome.
 
 ## Controls & Features
 
@@ -138,7 +142,7 @@ The case supports wireless charging, adding convenience for those who prefer cab
     <img src="/assets/images/reviews/earfun-air-pro-4-plus/9.jpg" alt="App features - controls" style="max-width: 100%; border-radius: 12px;">
 </div>
 
-When it comes to controls, Earfun allow you to change pretty much everything in a logical layout. They have also now added a 'mute call' option - something I've only seen previously with the Technics AZxxx series. This is really handy - a new addition for Earfun, and once again evidence they listen to feedback from users, particularly those selecting these for their daily work of Teams or Zoom calls. This degree of customization extends throughout the feature set - pragmatic, useful and straightforward. The app is hardly the flashiest out there, but it more than makes up for it with its ease-of-use and simplicity.
+When it comes to controls, Earfun allow you to change pretty much everything, and in a logical and easy-to-read layout. They have also now added a 'mute call' option - something I've only seen previously with the Technics AZxxx series. This is really handy - a new addition for Earfun, and once again evidence they listen to feedback from users, particularly those selecting these for their daily work of Teams or Zoom calls. This degree of customization extends throughout the feature set - pragmatic, useful and straightforward. The app is hardly the flashiest out there, but it more than makes up for it with its ease-of-use and simplicity.
 
 <div style="text-align: center; margin: 2rem 0;">
     <img src="/assets/images/reviews/earfun-air-pro-4-plus/10.jpg" alt="App features" style="max-width: 100%; border-radius: 12px;">
