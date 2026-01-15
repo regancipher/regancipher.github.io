@@ -156,7 +156,7 @@ permalink: /league-table/
     .league-table {
         font-size: 0.75rem;
     }
-    
+
     .league-table th,
     .league-table td {
         padding: 0.5rem 0.3rem;
@@ -167,11 +167,11 @@ permalink: /league-table/
     .league-page {
         padding: 2rem 1rem;
     }
-    
+
     .league-page h1 {
         font-size: 2rem;
     }
-    
+
     .league-table-wrapper {
         overflow-x: auto;
     }
@@ -181,15 +181,15 @@ permalink: /league-table/
 <div class="league-page">
     <h1>Audio League Table</h1>
     <p class="league-intro">
-        Rankings across all tested TWS earbuds based on comprehensive measurements and listening tests. 
+        Rankings across all tested TWS earbuds based on comprehensive measurements and listening tests.
         Click column headers to sort.
     </p>
 
     <div class="table-controls">
-        <input 
-            type="text" 
-            id="searchInput" 
-            class="filter-input" 
+        <input
+            type="text"
+            id="searchInput"
+            class="filter-input"
             placeholder="Search by brand or model..."
         >
     </div>
@@ -207,9 +207,9 @@ permalink: /league-table/
                     <th class="sortable numeric-cell" data-sort="treble">Treble</th>
                     <th class="sortable numeric-cell" data-sort="naturalness">Natural</th>
                     <th class="sortable numeric-cell" data-sort="staging">Stage</th>
-                    <th class="sortable numeric-cell" data-sort="imaging">Image</th>
-                    <th class="sortable numeric-cell" data-sort="thd-95db">THD 95</th>
-                    <th class="sortable numeric-cell" data-sort="thd-mi">THD Mi</th>
+                    <th class="sortable numeric-cell" data-sort="imaging">Imaging</th>
+                    <th class="sortable numeric-cell" data-sort="thd-95db">THD Max</th>
+                    <th class="sortable numeric-cell" data-sort="thd-mi">THD Min</th>
                     <th class="sortable numeric-cell" data-sort="custom">Custom</th>
                     <th class="sortable numeric-cell" data-sort="overall">Overall</th>
                 </tr>
@@ -222,10 +222,12 @@ permalink: /league-table/
 
 <script>
 const tableData = [
-    {brand: "Geekfly", model: "Vitas", pricing: "£150+", bassQuality: 94, bassQuantity: 85, midrange: 93, treble: 96, naturalness: 89, staging: 95, imaging: 95, thd95db: 0.235, thdMi: 0.034, custom: 80, overall: 94.07},
-    {brand: "Huawei", model: "FreeBuds Pro 4", pricing: "£100-150", bassQuality: 82.5, bassQuantity: 80, midrange: 83, treble: 82.5, naturalness: 82, staging: 82, imaging: 83.5, thd95db: 0.595, thdMi: 0.152, custom: 84, overall: 83.1},
-    {brand: "Oppo", model: "Enco X2", pricing: "£100-150", bassQuality: 82.5, bassQuantity: 77, midrange: 83.5, treble: 83, naturalness: 83, staging: 81, imaging: 83, thd95db: 0.682, thdMi: 0.117, custom: 81, overall: 83.1},
+    {brand: "Geekfly", model: "Vitas", pricing: "£150+", bassQuality: 94, bassQuantity: 86, midrange: 93, treble: 96, naturalness: 89, staging: 95, imaging: 95, thd95db: 0.235, thdMi: 0.034, custom: 80, overall: 94.07},
+    {brand: "Technics", model: "AZ80", pricing: "£150+", bassQuality: 81.5, bassQuantity: 80, midrange: 83, treble: 83, naturalness: 82.5, staging: 81, imaging: 83.5, thd95db: 2.05, thdMi: 0.266, custom: 88, overall: 83.06},
+    {brand: "Oppo", model: "Enco X2", pricing: "£100-150", bassQuality: 82.5, bassQuantity: 77, midrange: 83.5, treble: 83, naturalness: 83, staging: 81, imaging: 82.5, thd95db: 0.682, thdMi: 0.117, custom: 81, overall: 83.01},
+    {brand: "Geekfly", model: "GF01", pricing: "£150+", bassQuality: 81, bassQuantity: 87, midrange: 83, treble: 83, naturalness: 82, staging: 83, imaging: 83, thd95db: 4.5, thdMi: 0.402, custom: 80, overall: 82.90},
     {brand: "SoundPEATS", model: "H3", pricing: "£100-150", bassQuality: 81, bassQuantity: 79, midrange: 81.5, treble: 83, naturalness: 80, staging: 83, imaging: 83.5, thd95db: 2.42, thdMi: 0.071, custom: 85, overall: 82.55},
+    {brand: "Huawei", model: "FreeBuds Pro 4", pricing: "£100-150", bassQuality: 81, bassQuantity: 80, midrange: 82, treble: 82.5, naturalness: 82, staging: 82, imaging: 82, thd95db: 0.595, thdMi: 0.152, custom: 84, overall: 82.44},
     {brand: "Moondrop", model: "Golden Ages 2", pricing: "£50-100", bassQuality: 80, bassQuantity: 75, midrange: 82.5, treble: 82, naturalness: 83, staging: 81, imaging: 82, thd95db: 0.304, thdMi: 0.027, custom: 88, overall: 82.39},
     {brand: "Creative", model: "Aurvana Ace Mimi", pricing: "£100-150", bassQuality: 78.5, bassQuantity: 80.5, midrange: 83, treble: 83, naturalness: 81, staging: 82, imaging: 82, thd95db: 0.387, thdMi: 0.071, custom: 88, overall: 82.22},
     {brand: "SoundPEATS", model: "Air5 Pro Plus", pricing: "£50-100", bassQuality: 80.5, bassQuantity: 80.5, midrange: 82.5, treble: 82.5, naturalness: 80.5, staging: 82, imaging: 82, thd95db: 0.403, thdMi: 0.043, custom: 85, overall: 82.22},
@@ -279,7 +281,7 @@ function getRatingClass(value) {
 function renderTable(data) {
     const tbody = document.getElementById('tableBody');
     tbody.innerHTML = '';
-    
+
     data.forEach(row => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
@@ -305,16 +307,16 @@ function renderTable(data) {
 function sortTable(column) {
     const direction = currentSort.column === column && currentSort.direction === 'desc' ? 'asc' : 'desc';
     currentSort = {column, direction};
-    
+
     document.querySelectorAll('.league-table th').forEach(th => {
         th.classList.remove('sort-asc', 'sort-desc');
     });
     const header = document.querySelector(`[data-sort="${column}"]`);
     header.classList.add(direction === 'asc' ? 'sort-asc' : 'sort-desc');
-    
+
     const sorted = [...tableData].sort((a, b) => {
         let aVal, bVal;
-        
+
         switch(column) {
             case 'brand': aVal = a.brand; bVal = b.brand; break;
             case 'model': aVal = a.model; bVal = b.model; break;
@@ -331,7 +333,7 @@ function sortTable(column) {
             case 'custom': aVal = a.custom; bVal = b.custom; break;
             case 'overall': aVal = a.overall; bVal = b.overall; break;
         }
-        
+
         if (typeof aVal === 'number') {
             return direction === 'asc' ? aVal - bVal : bVal - aVal;
         } else {
@@ -340,35 +342,36 @@ function sortTable(column) {
             return 0;
         }
     });
-    
+
     renderTable(sorted);
 }
 
 function filterTable() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const filtered = tableData.filter(row => 
-        row.brand.toLowerCase().includes(searchTerm) || 
+    const filtered = tableData.filter(row =>
+        row.brand.toLowerCase().includes(searchTerm) ||
         row.model.toLowerCase().includes(searchTerm)
     );
-    
+
     // Re-sort filtered results
     const sorted = [...filtered].sort((a, b) => {
         return currentSort.direction === 'asc' ? a.overall - b.overall : b.overall - a.overall;
     });
-    
+
     renderTable(sorted);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize with descending overall sort
+    currentSort = {column: 'overall', direction: 'asc'}; // Trick to make next call flip to desc
     sortTable('overall');
-    
+
     document.querySelectorAll('.league-table th.sortable').forEach(th => {
         th.addEventListener('click', () => {
             sortTable(th.dataset.sort);
         });
     });
-    
+
     document.getElementById('searchInput').addEventListener('input', filterTable);
 });
 </script>
